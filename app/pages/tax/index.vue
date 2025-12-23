@@ -1,9 +1,9 @@
 <template>
-
+    tax
 </template>
 
-<script setup>
-await navigateTo('/real-time');
+<script setup lang="ts">
+
 </script>
 
 <style scoped>
