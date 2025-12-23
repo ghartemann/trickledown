@@ -1,16 +1,18 @@
 <template>
     <UHeader>
         <template #left>
-            <NuxtLink to="/">
-                <h1 class="w-auto shrink-0 text-xl text-primary font-semibold"
-                    @click="goToHome"
-                >
-                    TrickleDown.js
-                </h1>
-            </NuxtLink>
-        </template>
+            <div class="flex items-center gap-8">
+                <NuxtLink to="/">
+                    <h1 class="w-auto shrink-0 text-xl text-primary font-semibold"
+                        @click="goToHome"
+                    >
+                        TrickleDown.js
+                    </h1>
+                </NuxtLink>
 
-        <UNavigationMenu :items="items"></UNavigationMenu>
+                <UNavigationMenu :items="items"></UNavigationMenu>
+            </div>
+        </template>
 
         <template #right>
             <UColorModeButton variant="ghost"></UColorModeButton>
@@ -47,8 +49,8 @@ const items = computed(() => [
         icon: 'i-lucide-hand-coins',
         to: '/tax',
         active: route.path.startsWith('/tax')
-    },
-])
+    }
+]);
 
 function goToHome() {
     router.push({ name: 'home' });

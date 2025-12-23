@@ -1,16 +1,6 @@
 <template>
     <div class="w-full min-h-screen flex flex-col overflow-hidden relative pb-16">
-        <div v-if="loading" class="w-72 md:w-96 m-auto h-96">
-            <UProgress v-model="loadingModel"></UProgress>
-
-            <div class="text-center text-xs text-gray-500 mt-2">
-                Loading...
-            </div>
-
-            <div class="text-center text-xs text-gray-300">
-                Please wait
-            </div>
-        </div>
+        <AppLoader v-if="loading"></AppLoader>
 
         <template v-else>
             <MoneyMakersEnabled
@@ -31,6 +21,7 @@
 </template>
 
 <script setup>
+import AppLoader from '~/components/AppLoader.vue';
 import MoneyMakersEnabled from "~/components/MoneyMakersEnabled.vue";
 import MoneyMakersDisabled from "~/components/MoneyMakersDisabled.vue";
 import wagesData from "~/constants/wagesData.ts";
