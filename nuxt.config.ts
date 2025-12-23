@@ -14,9 +14,10 @@ export default defineNuxtConfig({
     },
 
     modules: [
+        '@nuxt/eslint',
         '@nuxt/ui',
+        '@pinia/nuxt',
         '@sentry/nuxt/module',
-        '@nuxtjs/sitemap',
     ],
 
     app: {
