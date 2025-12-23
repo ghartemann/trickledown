@@ -33,7 +33,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
 import CardMoneyMaker from "~/components/cards/CardMoneyMaker.vue";
 import NuxtPlaceholder from "~/components/NuxtPlaceholder.vue";
 

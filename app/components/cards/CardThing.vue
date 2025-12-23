@@ -60,7 +60,7 @@
 </template>
 
 <script setup>
-import useFormat from "../../composables/useFormat.js";
+import useFormat from "~/composables/useFormat.js";
 import TooltipSources from "~/components/TooltipSources.vue";
 
 const props = defineProps({
@@ -83,18 +83,18 @@ const tooltipTime = ref(false);
 const timeLeft = computed(() => {
     const moneyNeeded = props.thing.price - (props.moneyMaker.money % props.thing.price);
     let hoursLeft = moneyNeeded / props.moneyMaker.hourlyWage;
-    
+
     if (props.selectedTimeTab === 'parttime') {
         // Calculate working days (8 hours per day)
         const workingDays = Math.floor(hoursLeft / 8);
         // Remaining working hours
         const remainingHours = hoursLeft % 8;
-        
+
         // Convert working days to weeks (5 days per week)
         const weeks = Math.floor(workingDays / 5);
         // Remaining working days
         const remainingDays = workingDays % 5;
-        
+
         // Convert to display hours
         hoursLeft = (weeks * 7 * 24) + (remainingDays * 24) + remainingHours;
     }
@@ -108,7 +108,7 @@ const progressValue = computed(() => {
 });
 
 const timeItllTake = computed(() => {
-    return props.selectedTimeTab === 'parttime' 
+    return props.selectedTimeTab === 'parttime'
         ? props.moneyMaker.things[props.thing.slug].timeItLlTakePartTime
         : props.moneyMaker.things[props.thing.slug].timeItLlTake;
 });

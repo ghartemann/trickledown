@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import v from "~/version.json";
+import v from "~/../version.json";
 
 const version = ref(v.version);
 </script>
