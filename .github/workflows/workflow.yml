@@ -21,10 +21,10 @@ jobs:
             - name: Update npm
               run: npm install -g npm@latest
 
-            - name: Clean dependencies
-              run: |
-                  rm -rf node_modules package-lock.json
-                  npm install
+#            - name: Clean dependencies
+#              run: |
+#                  rm -rf node_modules package-lock.json
+#                  npm install
 
             - name: Build the Docker image
               run: sudo docker compose build --build-arg ENV=prod
