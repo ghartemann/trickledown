@@ -1,5 +1,5 @@
 import type {Thing} from "~/interfaces/Thing";
-import useFormat from "~/composables/useFormat";
+import useFormat from "~/composables/format";
 
 const thingsData: Thing[] = [
     {
@@ -367,7 +367,7 @@ const thingsData: Thing[] = [
             },
             {
                 text: 'This is the full price before discounts. On average, you can expect a 35% discount, bringing the total to approximately ' +
-                    useFormat().formatPrice(1376016.97 * .65, 0, 2, 'USD') + '.'
+                    useFormat().currency(1376016.97 * .65, 0, 2, 'USD') + '.'
             }
         ]
     },

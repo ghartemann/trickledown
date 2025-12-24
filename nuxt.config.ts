@@ -17,7 +17,7 @@ export default defineNuxtConfig({
         '@nuxt/eslint',
         '@nuxt/ui',
         '@pinia/nuxt',
-        '@sentry/nuxt/module',
+        // '@sentry/nuxt/module',
     ],
 
     app: {
@@ -36,18 +36,25 @@ export default defineNuxtConfig({
         }
     },
 
-    sentry: {
-        sourceMapsUploadOptions: {
-            org: 'ghartemann',
-            project: 'trickledown-nuxt'
-        }
-    },
+    // sentry: {
+    //     sourceMapsUploadOptions: {
+    //         org: 'ghartemann',
+    //         project: 'trickledown-nuxt'
+    //     }
+    // },
+
+    sourcemap: false,
+    // sentry: {
+    //     sourceMapsUploadOptions: {
+    //         enabled: false
+    //     }
+    // },
 
     components: [
         '~/components'
     ],
 
-    sourcemap: {
-        client: 'hidden'
-    }
+    // sourcemap: {
+    //     client: 'hidden'
+    // }
 });
