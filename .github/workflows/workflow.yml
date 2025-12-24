@@ -10,19 +10,27 @@ jobs:
         runs-on: self-hosted
 
         steps:
-            -   name: Checkout code
-                uses: actions/checkout@v2
+            - name: Checkout code
+              uses: actions/checkout@v2
 
-            -   name: Set up Node.js
-                uses: actions/setup-node@v6
-                with:
-                    node-version: '20'
+            - name: Set up Node.js
+              uses: actions/setup-node@v6
+              with:
+                  node-version: '20'
 
-            -   name: Build the Docker image
-                run: sudo docker compose build --build-arg ENV=prod
+            - name: Update npm
+              run: npm install -g npm@latest
 
-            -   name: Create and start container
-                run: sudo docker compose up -d
+            - name: Clean dependencies
+              run: |
+                  rm -rf node_modules package-lock.json
+                  npm install
 
-            -   name: Display container logs
-                run: sudo docker logs $(sudo docker ps -q -f name=moneymakers)
+            - name: Build the Docker image
+              run: sudo docker compose build --build-arg ENV=prod
+
+            - name: Create and start container
+              run: sudo docker compose up -d
+
+            - name: Display container logs
+              run: sudo docker logs $(sudo docker ps -q -f name=moneymakers)
