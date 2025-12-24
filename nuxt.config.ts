@@ -36,10 +36,17 @@ export default defineNuxtConfig({
         }
     },
 
+    // sentry: {
+    //     sourceMapsUploadOptions: {
+    //         org: 'ghartemann',
+    //         project: 'trickledown-nuxt'
+    //     }
+    // },
+
+    sourcemap: false,
     sentry: {
         sourceMapsUploadOptions: {
-            org: 'ghartemann',
-            project: 'trickledown-nuxt'
+            enabled: false
         }
     },
 
@@ -47,7 +54,7 @@ export default defineNuxtConfig({
         '~/components'
     ],
 
-    sourcemap: {
-        client: 'hidden'
-    }
+    // sourcemap: {
+    //     client: 'hidden'
+    // }
 });
