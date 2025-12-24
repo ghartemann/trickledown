@@ -22,8 +22,8 @@
 
 <script setup>
 import AppLoader from '~/components/AppLoader.vue';
-import MoneyMakersEnabled from "~/components/MoneyMakersEnabled.vue";
-import MoneyMakersDisabled from "~/components/MoneyMakersDisabled.vue";
+import MoneyMakersEnabled from "~/pages/real-time/components/MoneyMakersEnabled.vue";
+import MoneyMakersDisabled from "~/pages/real-time/components/MoneyMakersDisabled.vue";
 import wagesData from "~/constants/wagesData.ts";
 import useThings from "~/composables/useThings.js";
 

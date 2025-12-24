@@ -30,7 +30,7 @@
                             :color="variation > 0 ? 'error' : 'success'"
                             :icon="variation > 0 ? 'i-lucide-arrow-up' : 'i-lucide-arrow-down'"
                         >
-                            {{ useFormat().formatPrice(Math.abs(variation), 0, 2, 'USD') }}
+                            {{ useFormat().currency(Math.abs(variation), 0, 2, 'USD') }}
                         </UBadge>
 
                         <UBadge
@@ -52,7 +52,7 @@
                     </td>
 
                     <td class="text-error font-bold text-end">
-                        {{ useFormat().formatPrice(netWorth, 0, 2, 'USD') }}
+                        {{ useFormat().currency(netWorth, 0, 2, 'USD') }}
                     </td>
                 </tr>
 
@@ -62,7 +62,7 @@
                     </td>
 
                     <td class="text-success font-bold pb-2 text-end">
-                        {{ useFormat().formatPrice(tax, 0, 2, 'USD') }}
+                        {{ useFormat().currency(tax, 0, 2, 'USD') }}
                     </td>
                 </tr>
 
@@ -72,7 +72,7 @@
                     </td>
 
                     <td class="text-error font-bold border-t pt-2 text-end">
-                        {{ useFormat().formatPrice(netWorthAfterTax, 0, 2, 'USD') }}
+                        {{ useFormat().currency(netWorthAfterTax, 0, 2, 'USD') }}
                     </td>
                 </tr>
             </tbody>
@@ -81,6 +81,8 @@
 </template>
 
 <script setup>
+import useFormat from '~/composables/format.js';
+
 const moneyRetrieved = defineModel({ type: Number });
 
 const props = defineProps({

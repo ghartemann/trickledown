@@ -17,7 +17,7 @@ export default defineNuxtConfig({
         '@nuxt/eslint',
         '@nuxt/ui',
         '@pinia/nuxt',
-        '@sentry/nuxt/module',
+        // '@sentry/nuxt/module',
     ],
 
     app: {
@@ -44,11 +44,11 @@ export default defineNuxtConfig({
     // },
 
     sourcemap: false,
-    sentry: {
-        sourceMapsUploadOptions: {
-            enabled: false
-        }
-    },
+    // sentry: {
+    //     sourceMapsUploadOptions: {
+    //         enabled: false
+    //     }
+    // },
 
     components: [
         '~/components'

@@ -11,7 +11,7 @@
             <UCheckbox
                 :model-value="thing.checked"
                 :label="thing.title"
-                :description="useFormat().formatPrice(thing.value, 0, 0, 'USD')"
+                :description="useFormat().currency(thing.value, 0, 0, 'USD')"
                 class="pointer-events-none"
             ></UCheckbox>
         </UCard>
@@ -19,6 +19,8 @@
 </template>
 
 <script setup>
+import useFormat from '~/composables/format.js';
+
 const props = defineProps({
     moneyRetrievedTotal: {
         type: Number,

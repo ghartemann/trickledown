@@ -35,6 +35,7 @@
 
 <script setup>
 import { storeToRefs } from 'pinia';
+import useFormat from '~/composables/format.js';
 import BillionaireCard from '~/pages/tax/components/BillionaireCard.vue';
 
 const moneyRetrieved = defineModel('money-retrieved', { type: Array });

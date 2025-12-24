@@ -39,7 +39,7 @@
                     </th>
 
                     <td class="text-primary font-bold text-end">
-                        {{ useFormat().formatPrice(moneyRetrievedTotal, 0, 2, 'USD') }}
+                        {{ useFormat().currency(moneyRetrievedTotal, 0, 2, 'USD') }}
                     </td>
                 </tr>
             </tbody>
@@ -48,6 +48,7 @@
 </template>
 
 <script setup>
+import useFormat from '~/composables/format.js';
 import TaxSlider from '~/pages/tax/components/TaxSlider.vue';
 
 const taxRate = defineModel('taxRate', { type: Number });

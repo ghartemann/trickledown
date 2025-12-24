@@ -20,7 +20,7 @@
                     <div class="flex justify-between items-baseline gap-2">
                         <div class="flex gap-1">
                             <div class="text-xs select-none">
-                                {{ useFormat().formatPrice(thing.price) }}
+                                {{ useFormat().currency(thing.price) }}
                             </div>
 
                             <TooltipSources
@@ -60,7 +60,7 @@
 </template>
 
 <script setup>
-import useFormat from "~/composables/useFormat.js";
+import useFormat from "~/composables/format.js";
 import TooltipSources from "~/components/TooltipSources.vue";
 
 const props = defineProps({

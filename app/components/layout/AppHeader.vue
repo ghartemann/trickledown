@@ -2,7 +2,7 @@
     <UHeader>
         <template #left>
             <div class="flex items-center gap-8">
-                <NuxtLink to="/">
+                <NuxtLink to="/public">
                     <h1 class="w-auto shrink-0 text-xl text-primary font-semibold"
                         @click="goToHome"
                     >
