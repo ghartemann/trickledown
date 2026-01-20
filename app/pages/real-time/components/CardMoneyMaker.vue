@@ -11,7 +11,7 @@
 
         <div class="flex gap-1">
             <div class="text-xs text-gray-500">
-                {{ useFormat().formatPrice(moneyMaker.hourlyWage) }} per hour
+                {{ useFormat().currency(moneyMaker.hourlyWage) }} per hour
             </div>
 
             <TooltipSources
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="text-3xl font-bold">
-                    {{ useFormat().formatPrice(moneyMaker.money) }}
+                    {{ useFormat().currency(moneyMaker.money) }}
                 </div>
 
                 <div class="text-xs">
@@ -78,8 +78,8 @@
 </template>
 
 <script setup>
-import useFormat from "~/composables/useFormat.js";
-import CardThing from "~/components/cards/CardThing.vue";
+import useFormat from "~/composables/format.js";
+import CardThing from "~/pages/real-time/components/CardThing.vue";
 import TooltipSources from "~/components/TooltipSources.vue";
 import useThings from "~/composables/useThings.js";
 
