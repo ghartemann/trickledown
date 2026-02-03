@@ -10,7 +10,10 @@
             </div>
         </div>
 
-        <div v-if="moneyMakers.length === 0" class="text-center text-xs text-gray-500 mt-4">
+        <div
+            v-if="moneyMakers.length === 0"
+            class="text-center text-xs text-gray-500 mt-4"
+        >
             No available wage type
         </div>
 

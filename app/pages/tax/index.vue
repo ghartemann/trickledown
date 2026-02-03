@@ -2,22 +2,26 @@
     <div class="w-full min-h-screen flex flex-col overflow-hidden relative pb-16">
         <AppLoader v-if="loadingBillionaires"></AppLoader>
 
-        <UContainer v-else class="mt-4 mb-8">
+        <UContainer
+            v-else
+            class="mt-4 mb-8"
+        >
             <TaxSliderContainer
                 v-model:tax-rate="taxRate"
                 :tax-rate-min="taxRateMin"
                 :tax-rate-max="taxRateMax"
                 :money-retrieved-total="moneyRetrievedTotal"
+                class="my-8 md:w-1/2 mx-auto"
             ></TaxSliderContainer>
 
-            <div class="w-1/2 mx-auto grid grid-cols-2 gap-2">
+            <div class="md:w-1/2 mx-auto grid grid-cols-2 gap-2">
                 <BillionairesContainer
-                    class="col-span-full"
                     v-model:money-retrieved="moneyRetrieved"
+                    class="col-span-full"
                     :tax-rate="taxRate"
                 ></BillionairesContainer>
 
-<!--                <CouldBuyContainer :money-retrieved-total="moneyRetrievedTotal"></CouldBuyContainer>-->
+                <!--                <CouldBuyContainer :money-retrieved-total="moneyRetrievedTotal"></CouldBuyContainer>-->
             </div>
         </UContainer>
     </div>
@@ -27,7 +31,6 @@
 import { storeToRefs } from 'pinia';
 import AppLoader from '~/components/AppLoader.vue';
 import BillionairesContainer from '~/pages/tax/components/BillionairesContainer.vue';
-import CouldBuyContainer from '~/pages/tax/components/CouldBuyContainer.vue';
 import TaxSliderContainer from '~/pages/tax/components/TaxSliderContainer.vue';
 
 useBillionairesStore().fetchDataFromApi();

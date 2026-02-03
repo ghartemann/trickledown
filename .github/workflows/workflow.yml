@@ -1,4 +1,4 @@
-name: Nuxt CI
+name: Docker Image CI
 
 on:
     push:
@@ -8,24 +8,12 @@ on:
 jobs:
     build:
         runs-on: self-hosted
-
         steps:
-            -   name: Checkout code
-                uses: actions/checkout@v4
+            - name: Checkout code
+              uses: actions/checkout@v4
 
-            -   name: Set up Node.js
-                uses: actions/setup-node@v6
-                with:
-                    node-version: '20'
+            - name: Build Docker container
+              run: sudo -E docker compose build --no-cache --pull
 
-            -   name: Stop previous containers
-                run: sudo docker compose down
-
-            -   name: Build the Docker image
-                run: sudo docker compose build --no-cache --build-arg ENV=prod
-
-            -   name: Create and start container
-                run: sudo docker compose up -d
-
-            -   name: Display container logs
-                run: sudo docker compose logs moneymakers || true
+            - name: Run the container
+              run: sudo -E docker compose up -d

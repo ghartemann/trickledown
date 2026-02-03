@@ -1,9 +1,18 @@
 <template>
-    <UCard variant="soft" :ui="{body: '!p-4'}">
+    <UCard
+        variant="soft"
+        :ui="{body: '!p-4'}"
+    >
         <div class="w-full flex gap-4 items-center">
-            <UIcon :name="thing.icon" class="size-6 shrink-0"/>
+            <UIcon
+                :name="thing.icon"
+                class="size-6 shrink-0"
+            ></UIcon>
 
-            <USeparator orientation="vertical" class="h-12"/>
+            <USeparator
+                orientation="vertical"
+                class="h-12"
+            ></USeparator>
 
             <div class="w-full">
                 <div>
@@ -36,8 +45,9 @@
                             :text="useFormat().formatHours(timeItllTake).join(' ')"
                         >
                             <!-- cet homme emmerde ses collègues avec ça toute la sainte journée et pourtant quand il est seul...-->
-                            <div @click="() => {if (!timeTruncated) tooltipTime = false}"
-                                 class="text-xs text-gray-500 select-none"
+                            <div
+                                @click="() => {if (!timeTruncated) tooltipTime = false}"
+                                class="text-xs text-gray-500 select-none"
                             >
                                 {{ useFormat().formatHours(timeItllTake, true, true).join(' ') }}
                             </div>
@@ -60,8 +70,8 @@
 </template>
 
 <script setup>
-import useFormat from "~/composables/format.js";
-import TooltipSources from "~/components/TooltipSources.vue";
+import TooltipSources from '~/components/TooltipSources.vue';
+import useFormat from '~/composables/format.js';
 
 const props = defineProps({
     thing: {

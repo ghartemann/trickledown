@@ -1,12 +1,5 @@
 <template>
-    <UCard
-        variant="soft"
-        class="my-8 w-1/2 mx-auto"
-    >
-        <template #header>
-            Tax rate
-        </template>
-
+    <UCard variant="soft">
         <ClientOnly>
             <TaxSlider
                 v-model:tax-rate="taxRate"
@@ -18,27 +11,27 @@
         <table class="mt-8 table-fixed w-full">
             <tbody>
                 <tr>
-                    <th>
+                    <th class="text-xs md:text-base">
                         Tax rate
                     </th>
 
-                    <td class="text-primary font-bold text-end">
+                    <td class="text-xs md:text-base text-primary font-bold text-end">
                         <span v-if="taxRate === 0">
                             None
                         </span>
 
                         <span v-else>
-                            {{ taxRate }} % after the first 100 million
+                            {{ taxRate }} % after the first 100M$
                         </span>
                     </td>
                 </tr>
 
                 <tr>
-                    <th>
+                    <th class="text-xs md:text-base">
                         Money retrieved
                     </th>
 
-                    <td class="text-primary font-bold text-end">
+                    <td class="text-primary font-bold text-end text-xs md:text-base">
                         {{ useFormat().currency(moneyRetrievedTotal, 0, 2, 'USD') }}
                     </td>
                 </tr>

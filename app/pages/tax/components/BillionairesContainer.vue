@@ -1,7 +1,10 @@
 <template>
     <div class="flex flex-col gap-2">
         <h2>
-            People <ULink @click="scrollToAnchor('#you')">(and you!)</ULink>
+            People
+            <ULink @click="scrollToAnchor('#you')">
+                (and you!)
+            </ULink>
         </h2>
 
         <BillionaireCard
@@ -12,12 +15,12 @@
             :tax-rate="taxRate"
         ></BillionaireCard>
 
-        <UCard>
-            <div class="text-center text-dimmed">
-                {{ useFormat().formatNumberNice((stats.worldPopulation * 0.16) - 100, true) }}
-                other people richer than you
+        <NuxtPlaceholder>
+            <div class="text-center text-dimmed italic text-base">
+                {{ useFormat().formatNumberNice((stats.worldPopulation * 0.16) - 100, true, 0, 0) }}
+                other people ahead of you
             </div>
-        </UCard>
+        </NuxtPlaceholder>
 
         <BillionaireCard
             id="you"
@@ -25,20 +28,20 @@
             :tax-rate="taxRate"
         ></BillionaireCard>
 
-        <UCard>
-            <div class="text-center text-dimmed">
-                {{ useFormat().formatNumberNice(stats.worldPopulation - (stats.worldPopulation * 0.16) - 100, true) }}
-                other people poorer than you
+        <NuxtPlaceholder>
+            <div class="text-center text-dimmed italic text-base">
+                {{ useFormat().formatNumberNice(stats.worldPopulation - (stats.worldPopulation * 0.16) - 100, true, 0, 0) }}
+                other people behind you
             </div>
-        </UCard>
+        </NuxtPlaceholder>
     </div>
 </template>
 
 <script setup>
 import { storeToRefs } from 'pinia';
 import useFormat from '~/composables/format.js';
+import stats from '~/constants/stats';
 import BillionaireCard from '~/pages/tax/components/BillionaireCard.vue';
-import stats from "~/constants/stats";
 
 const { scrollToAnchor } = useAnchorScroll();
 

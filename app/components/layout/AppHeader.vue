@@ -3,14 +3,18 @@
         <template #left>
             <div class="flex items-center gap-8">
                 <NuxtLink to="/">
-                    <h1 class="w-auto shrink-0 text-xl text-primary font-semibold"
+                    <h1
+                        class="w-auto shrink-0 text-xl text-primary font-semibold"
                         @click="goToHome"
                     >
                         TrickleDown.js
                     </h1>
                 </NuxtLink>
 
-                <UNavigationMenu :items="items"></UNavigationMenu>
+                <UNavigationMenu
+                    :items="items"
+                    class="hidden md:block"
+                ></UNavigationMenu>
             </div>
         </template>
 
@@ -18,14 +22,22 @@
             <UColorModeButton variant="ghost"></UColorModeButton>
 
             <UButton
-                @click="showAboutModal = true"
                 icon="lucide-info"
                 color="neutral"
                 variant="ghost"
+                @click="showAboutModal = true"
             ></UButton>
         </template>
 
         <AboutModal v-model="showAboutModal"></AboutModal>
+
+        <template #body>
+            <UNavigationMenu
+                :items="items"
+                orientation="vertical"
+                class="-mx-2.5"
+            ></UNavigationMenu>
+        </template>
     </UHeader>
 </template>
 
