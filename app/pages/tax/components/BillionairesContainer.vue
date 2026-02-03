@@ -14,7 +14,7 @@
 
         <UCard>
             <div class="text-center text-dimmed">
-                {{ useFormat().formatNumberNice((worldPopulation * 0.16) - 100, true) }}
+                {{ useFormat().formatNumberNice((stats.worldPopulation * 0.16) - 100, true) }}
                 other people richer than you
             </div>
         </UCard>
@@ -27,7 +27,7 @@
 
         <UCard>
             <div class="text-center text-dimmed">
-                {{ useFormat().formatNumberNice(worldPopulation - (worldPopulation * 0.16) - 100, true) }}
+                {{ useFormat().formatNumberNice(stats.worldPopulation - (stats.worldPopulation * 0.16) - 100, true) }}
                 other people poorer than you
             </div>
         </UCard>
@@ -38,6 +38,7 @@
 import { storeToRefs } from 'pinia';
 import useFormat from '~/composables/format.js';
 import BillionaireCard from '~/pages/tax/components/BillionaireCard.vue';
+import stats from "~/constants/stats";
 
 const { scrollToAnchor } = useAnchorScroll();
 
@@ -52,13 +53,11 @@ defineProps({
 
 const { billionaires } = storeToRefs(useBillionairesStore());
 
-const worldPopulation = ref(8273722861);
-
 const you = ref({
     personName: 'You',
     source: 'Nothing much, probably',
     finalWorth: 0.05,
-    rank: Math.round(worldPopulation.value * 0.16),
+    rank: Math.round(stats.worldPopulation * 0.16),
     estWorthPrev: 0.05
 });
 </script>
