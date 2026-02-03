@@ -1,5 +1,5 @@
 <template>
-    <div class="p-4 sm:p-6">
+    <div class="">
         <div class="relative overflow-hidden rounded-xl border border-dashed border-accented opacity-75 px-4 flex items-center justify-center h-32">
             <div class="text-center text-xs text-gray-500">
                 <slot></slot>

@@ -3,7 +3,10 @@
         <template #header>
             <div class="w-full flex justify-between items-center">
                 <div class="flex gap-4 items-center">
-                    <div :class="billionaire.rank > 100 ? 'w-fit' : 'w-10'">
+                    <div
+                        :class="billionaire.rank > 100 ? 'w-fit' : 'w-6'"
+                        class="text-sm text-dimmed"
+                    >
                         #{{ useFormat().formatNumberNice(billionaire.rank, true) }}
                     </div>
 
@@ -29,6 +32,7 @@
                         <UBadge
                             :color="variation > 0 ? 'error' : 'success'"
                             :icon="variation > 0 ? 'i-lucide-arrow-up' : 'i-lucide-arrow-down'"
+                            class="hidden md:block "
                         >
                             {{ useFormat().currency(Math.abs(variation), 0, 0, 'USD') }}
                         </UBadge>

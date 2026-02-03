@@ -1,5 +1,5 @@
 <template>
-    <UCard :ui="{body: '!w-96'}">
+    <UCard :ui="{body: '!w-[calc(100vw-2rem)] sm:!w-96'}">
         <div class="flex justify-between items-center">
             <div>
                 {{ moneyMaker.name }}

@@ -6,7 +6,7 @@
             class="flex pb-4 px-2 snap-x"
         >
             <div v-if="moneyMakers.length === 0">
-                <NuxtPlaceholder class="w-96">
+                <NuxtPlaceholder class="w-96 p-4 sm:p-6">
                     <div class="text-center text-xs text-gray-500">
                         Add at least one type
                     </div>

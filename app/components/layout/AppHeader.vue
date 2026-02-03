@@ -11,7 +11,10 @@
                     </h1>
                 </NuxtLink>
 
-                <UNavigationMenu :items="items"></UNavigationMenu>
+                <UNavigationMenu
+                    :items="items"
+                    class="hidden md:block"
+                ></UNavigationMenu>
             </div>
         </template>
 
@@ -27,6 +30,14 @@
         </template>
 
         <AboutModal v-model="showAboutModal"></AboutModal>
+
+        <template #body>
+            <UNavigationMenu
+                :items="items"
+                orientation="vertical"
+                class="-mx-2.5"
+            ></UNavigationMenu>
+        </template>
     </UHeader>
 </template>
 

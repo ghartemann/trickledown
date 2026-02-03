@@ -15,12 +15,12 @@
             :tax-rate="taxRate"
         ></BillionaireCard>
 
-        <UCard>
-            <div class="text-center text-dimmed">
-                {{ useFormat().formatNumberNice((stats.worldPopulation * 0.16) - 100, true) }}
-                other people richer than you
+        <NuxtPlaceholder>
+            <div class="text-center text-dimmed italic text-base">
+                {{ useFormat().formatNumberNice((stats.worldPopulation * 0.16) - 100, true, 0, 0) }}
+                other people ahead of you
             </div>
-        </UCard>
+        </NuxtPlaceholder>
 
         <BillionaireCard
             id="you"
@@ -28,12 +28,12 @@
             :tax-rate="taxRate"
         ></BillionaireCard>
 
-        <UCard>
-            <div class="text-center text-dimmed">
-                {{ useFormat().formatNumberNice(stats.worldPopulation - (stats.worldPopulation * 0.16) - 100, true) }}
-                other people poorer than you
+        <NuxtPlaceholder>
+            <div class="text-center text-dimmed italic text-base">
+                {{ useFormat().formatNumberNice(stats.worldPopulation - (stats.worldPopulation * 0.16) - 100, true, 0, 0) }}
+                other people behind you
             </div>
-        </UCard>
+        </NuxtPlaceholder>
     </div>
 </template>
 

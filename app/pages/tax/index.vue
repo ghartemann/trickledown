@@ -11,9 +11,10 @@
                 :tax-rate-min="taxRateMin"
                 :tax-rate-max="taxRateMax"
                 :money-retrieved-total="moneyRetrievedTotal"
+                class="my-8 md:w-1/2 mx-auto"
             ></TaxSliderContainer>
 
-            <div class="w-1/2 mx-auto grid grid-cols-2 gap-2">
+            <div class="md:w-1/2 mx-auto grid grid-cols-2 gap-2">
                 <BillionairesContainer
                     v-model:money-retrieved="moneyRetrieved"
                     class="col-span-full"

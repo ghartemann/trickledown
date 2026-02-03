@@ -11,7 +11,7 @@
             <div
                 v-for="(step, index) in stepper"
                 :key="index"
-                class="absolute text-xs text-dimmed"
+                class="absolute text-[10px] md:text-xs text-dimmed"
                 :style="{ left: `calc(${step}% * 0.97)` }"
             >
                 {{ step }}%
