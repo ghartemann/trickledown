@@ -32,6 +32,7 @@
     },
     "devDependencies": {
         "@release-it/bumper": "^7.0.5",
+        "nuxt-anchorscroll": "^1.0.5",
         "vue-tsc": "^3.2.2"
     }
 }

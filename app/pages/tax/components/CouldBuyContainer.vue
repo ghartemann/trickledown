@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col gap-2">
-        <h2>
+        <h2 class="font-medium">
             Things this money could buy
         </h2>
 

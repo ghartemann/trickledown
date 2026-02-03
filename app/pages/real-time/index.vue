@@ -54,7 +54,7 @@ useHead({
     ]
 });
 
-const rate = ref(10000);
+const rate = ref(10);
 const timeElapsed = ref(0); // in seconds
 const lastUpdateTime = ref(Date.now());
 const animationFrameId = ref(null);
