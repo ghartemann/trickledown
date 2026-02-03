@@ -30,14 +30,14 @@
                             :color="variation > 0 ? 'error' : 'success'"
                             :icon="variation > 0 ? 'i-lucide-arrow-up' : 'i-lucide-arrow-down'"
                         >
-                            {{ useFormat().currency(Math.abs(variation), 0, 2, 'USD') }}
+                            {{ useFormat().currency(Math.abs(variation), 0, 0, 'USD') }}
                         </UBadge>
 
                         <UBadge
                             :color="variation > 0 ? 'error' : 'success'"
                             :icon="variation > 0 ? 'i-lucide-arrow-up' : 'i-lucide-arrow-down'"
                         >
-                            {{ useFormat().formatNumberNice(Math.abs(variationPercentage), 0, 2) }}%
+                            {{ useFormat().formatNumberNice(variationPercentage, true, 0, 2) }}%
                         </UBadge>
                     </div>
                 </UTooltip>

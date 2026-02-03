@@ -142,11 +142,14 @@ export default function useFormat() {
         return parts;
     }
 
-    function formatNumberNice(number, noSuffix = false) {
+    function formatNumberNice(number, noSuffix = false, minimumFractionDigits = 0, maximumFractionDigits = 2) {
         let formattedNumber;
 
         if (noSuffix) {
-            return new Intl.NumberFormat('fr-FR').format(Math.floor(number));
+            return new Intl.NumberFormat('fr-FR', {
+                maximumFractionDigits,
+                minimumFractionDigits
+            }).format(number);
         }
 
         switch (true) {

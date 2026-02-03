@@ -21,6 +21,8 @@
 <script setup>
 import useFormat from '~/composables/format.js';
 
+const thingss = useThings().getThings();
+
 const props = defineProps({
     moneyRetrievedTotal: {
         type: Number,
@@ -29,22 +31,16 @@ const props = defineProps({
 });
 
 const things = ref([
-    {
-        title: 'Rebuilding Gaza',
-        value: 53.2
-    },
-    {
-        title: 'Sécurité Sociale budget 2025',
-        value: 666
-    }
+    thingss.find((t) => t.slug === 'gaza')
 ]);
 
 const thingsComputed = computed(() => {
     return things.value.map((t) => {
         return {
             ...t,
-            value: t.value * 1000000000,
-            checked: t.value * 1000000000 <= props.moneyRetrievedTotal
+            title: t.name,
+            value: t.price,
+            checked: t.price <= props.moneyRetrievedTotal
         };
     });
 });

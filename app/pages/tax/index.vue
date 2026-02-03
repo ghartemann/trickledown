@@ -10,13 +10,14 @@
                 :money-retrieved-total="moneyRetrievedTotal"
             ></TaxSliderContainer>
 
-            <div class="w-full grid grid-cols-2 gap-2">
+            <div class="w-1/2 mx-auto grid grid-cols-2 gap-2">
                 <BillionairesContainer
+                    class="col-span-full"
                     v-model:money-retrieved="moneyRetrieved"
                     :tax-rate="taxRate"
                 ></BillionairesContainer>
 
-                <CouldBuyContainer :money-retrieved-total="moneyRetrievedTotal"></CouldBuyContainer>
+<!--                <CouldBuyContainer :money-retrieved-total="moneyRetrievedTotal"></CouldBuyContainer>-->
             </div>
         </UContainer>
     </div>

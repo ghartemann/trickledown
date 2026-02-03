@@ -22,37 +22,10 @@
 
 <script setup>
 import AppLoader from '~/components/AppLoader.vue';
-import MoneyMakersEnabled from "~/pages/real-time/components/MoneyMakersEnabled.vue";
-import MoneyMakersDisabled from "~/pages/real-time/components/MoneyMakersDisabled.vue";
-import wagesData from "~/constants/wagesData.ts";
-import useThings from "~/composables/useThings.js";
-
-const route = useRoute();
-
-const meta = {
-    title: 'TrickleDown.js',
-    description: 'How long would it take you to buy a 65 m Yacht? What about Elon Musk?',
-    image: 'https://trickledown.ghartemann.fr/3d-money.jpg',
-    url: 'https://trickledown.ghartemann.fr/'
-};
-
-useSeoMeta({
-    description: meta.description,
-    ogTitle: meta.title,
-    ogDescription: meta.description,
-    ogImage: meta.image,
-    ogUrl: meta.url,
-    twitterTitle: meta.title,
-    twitterDescription: meta.description,
-    twitterImage: meta.image,
-    twitterCard: 'summary'
-});
-
-useHead({
-    link: [
-        { rel: 'canonical', href: meta.url }
-    ]
-});
+import useThings from '~/composables/useThings.js';
+import wagesData from '~/constants/wagesData.ts';
+import MoneyMakersDisabled from '~/pages/real-time/components/MoneyMakersDisabled.vue';
+import MoneyMakersEnabled from '~/pages/real-time/components/MoneyMakersEnabled.vue';
 
 const rate = ref(10);
 const timeElapsed = ref(0); // in seconds
@@ -65,7 +38,6 @@ const things = ref(useThings().getThings());
 const moneyMakers = ref([]);
 
 const loading = computed(() => moneyMakers.value.length === 0);
-const loadingModel = ref(null);
 
 onMounted(() => {
     initMoneyMakers();
@@ -86,7 +58,7 @@ function startAnimation() {
 
         // Only update if enough time has passed (based on rate)
         if (deltaTime >= rate.value) {
-        update();
+            update();
             lastFrameTime = currentTime;
         }
 

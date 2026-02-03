@@ -531,6 +531,25 @@ const thingsData: Thing[] = [
         ]
     },
     {
+        name: 'Epstein island',
+        slug: 'epstein',
+        icon: 'tree-palm',
+        price: {
+            value: 60000000, // 60M
+            currency: 'USD'
+        },
+        sources: [
+            {
+                name: 'NPR',
+                text: "<i>The private islands that were a nexus in Jeffrey Epstein's depraved abuse and trafficking of young women and underage girls will be turned into a resort " +
+                    "destination by a U.S. billionaire. Great St. James and Little St. James have been in limbo since Epstein's death in 2019.<br>Financier Stephen Deckoff paid " +
+                    "$60 million for Great St. James and Little St. James through his SD Investments firm</i>",
+                date: '2023-05-04',
+                link: 'https://www.npr.org/2023/05/04/1173956903/jeffrey-epstein-island-sold-st-james'
+            }
+        ]
+    },
+    {
         name: 'A Falcon Heavy launch',
         slug: 'spacex',
         icon: 'rocket',
