@@ -1,9 +1,13 @@
 <template>
     <UFooter>
         <div class="text-center text-xs">
-            <pre class="inline">
+            <UBadge
+                size="sm"
+                class="font-mono"
+                color="neutral"
+            >
                 v{{ version }}
-            </pre>
+            </UBadge>
 
             <div>
                 Created by
