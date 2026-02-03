@@ -44,6 +44,7 @@ export const useBillionairesStore = defineStore('billionaires', () => {
 
     return {
         billionaires,
+        loadingBillionaires,
         fetchDataFromApi
     };
 });

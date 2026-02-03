@@ -48,6 +48,10 @@ defineProps({
     taxRate: {
         type: Number,
         required: true
+    },
+    loading: {
+        type: Boolean,
+        required: true
     }
 });
 
