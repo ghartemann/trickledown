@@ -23,7 +23,7 @@ export default withNuxt(
             }],
             'vue/no-v-html': 'off',
             'vue/multi-word-component-names': ['error', {
-                'ignores': ['index']
+                'ignores': ['index', 'error']
             }]
         }
     }
