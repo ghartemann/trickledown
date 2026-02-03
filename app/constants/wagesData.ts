@@ -1,4 +1,4 @@
-import useFormat from "~/composables/useFormat.js";
+import useFormat from "~/composables/format.js";
 import currencies from "~/constants/currencies.js";
 import type { Wage } from "~/interfaces/Wage";
 
@@ -25,7 +25,7 @@ const wagesData: Wage[] = [
         sources: [
             {
                 text: 'To properly compare the RSA with the minimum wage, we emulate a 35-hour work week.<br>' +
-                    '647.79 / 35 / 4 = ' + useFormat().formatPrice(647.79 / 35 / 4) + ' per hour',
+                    '647.79 / 35 / 4 = ' + useFormat().currency(647.79 / 35 / 4) + ' per hour',
             },
             {
                 name: 'Service-Public.fr',
@@ -73,7 +73,7 @@ const wagesData: Wage[] = [
                 text: 'Net salary, 40 hours a week :<br>' +
                     '(gross salary * 78 %) / worked hours a year =<br>' +
                     '(32000 * 0.78) / 1820 =<br>' +
-                    useFormat().formatPrice((32000 * 0.78) / 1820) + ' per hour',
+                    useFormat().currency((32000 * 0.78) / 1820) + ' per hour',
                 link: 'https://www.glassdoor.fr/Salaires/developpeur-web-junior-salaire-SRCH_KO0,22.htm',
             }
         ]
@@ -190,7 +190,7 @@ const wagesData: Wage[] = [
             },
             {
                 text: 'As explained in the article, it is difficult to compare the growth of Musk\'s fortune with an ' +
-                    'income as such. However, it\s pretty clear that the purpose of this application is not so much ' +
+                    'income as such. However, it\'s pretty clear that the purpose of this application is not so much ' +
                     'to demonstrate great science as to highlight the great inequalities between rich folks and the rest of us. ' +
                     'Please read the About section for more information.',
             }

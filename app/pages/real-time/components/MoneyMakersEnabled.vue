@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import CardMoneyMaker from "~/components/cards/CardMoneyMaker.vue";
+import CardMoneyMaker from "~/pages/real-time/components/CardMoneyMaker.vue";
 import NuxtPlaceholder from "~/components/NuxtPlaceholder.vue";
 
 defineProps({

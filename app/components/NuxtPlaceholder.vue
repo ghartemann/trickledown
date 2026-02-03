@@ -1,11 +1,14 @@
 <template>
     <div class="p-4 sm:p-6">
-        <div class="relative overflow-hidden rounded-xl border border-dashed border-(--ui-border-accented) opacity-75 px-4 flex items-center justify-center h-32">
+        <div class="relative overflow-hidden rounded-xl border border-dashed border-accented opacity-75 px-4 flex items-center justify-center h-32">
             <div class="text-center text-xs text-gray-500">
                 <slot></slot>
             </div>
 
-            <svg class="absolute inset-0 h-full w-full stroke-(--ui-border-inverted)/10" fill="none">
+            <svg
+                class="absolute inset-0 h-full w-full stroke-(--ui-border-inverted)/10"
+                fill="none"
+            >
                 <defs>
                     <pattern
                         id="pattern-5c1e4f0e-62d5-498b-8ff0-cf77bb448c8e"

@@ -1,5 +1,6 @@
 import type {Thing} from "~/interfaces/Thing";
-import useFormat from "~/composables/useFormat";
+import useFormat from "~/composables/format";
+import stats from "~/constants/stats";
 
 const thingsData: Thing[] = [
     {
@@ -57,7 +58,7 @@ const thingsData: Thing[] = [
         slug: 'metro',
         icon: 'credit-card',
         price: {
-            value: 100,
+            value: 104.5,
             currency: 'CAD'
         },
         sources: []
@@ -125,6 +126,21 @@ const thingsData: Thing[] = [
         sources: []
     },
     {
+        name: '2 x 32GB DDR5 RAM sticks',
+        slug: 'ram',
+        icon: 'memory-stick',
+        price: {
+            value: 1511.99,
+            currency: 'CAD'
+        },
+        sources: [
+            {
+                name: 'Best Buy Canada',
+                link: 'https://www.bestbuy.ca/en-ca/product/corsair-vengeance-rgb-64gb-2-x-32gb-ddr5-6000mhz-desktop-memory-cmh64gx5m2b6000z30/19263141'
+            }
+        ]
+    },
+    {
         name: 'French driver license',
         slug: 'driving-license',
         icon: 'car-front',
@@ -162,19 +178,14 @@ const thingsData: Thing[] = [
         slug: 'gaming-pc',
         icon: 'pc-case',
         price: {
-            value: 5999.95,
-            currency: 'EUR'
+            value: 14679.99,
+            currency: 'CAD'
         },
         sources: [
             {
-                name: 'LDLC',
-                text: '- Intel Core i9-14900KF processor (8 Performance-Cores 3.2 GHz + 16 Efficient-Cores 2.4 GHz - 32 Threads - 36 MB Cache)<br>' +
-                    '- MSI AIO liquid cooling system with 240 mm radiator<br>' +
-                    '- 64 GB DDR5 5600 MHz memory with heatsinks (2x 16 GB - 2 slots - maximum 64 GB total)<br>' +
-                    '- NVIDIA GeForce RTX 4090 graphics card with 24 GB GDDR6 dedicated memory<br>' +
-                    '- 2 TB PCIe M.2 SSD + 2 TB hard drive<br>' +
-                    '(translation)',
-                link: 'https://www.ldlc.com/fiche/PB00583336.html'
+                name: 'Best Buy Canada',
+                text: 'This outstanding CLX Horus is driven by an AMD Ryzen 9 9950X3D 4.3GHz 16-Core processor, and 96GB of blazing fast DDR5 memory! Coupled with GeForce RTX 5090 32GB graphics, for vibrant details. Rounding out the PC are the NVMe M.2 2TB SSD & 8TB HDD drives, Wired and WiFi networking, a free gaming keyboard and mouse, and Windows 11 Home 64-bit',
+                link: 'https://www.bestbuy.ca/en-ca/product/clx-horus-gaming-desktop-liquid-cooled-amd-ryzen-9-9950x3d-4-3ghz-16-core-processor-96gb-ddr5-memory-rtx-5090-32gb-gddr7-graphics-2tb-ssd-8tb-hdd-wifi-windows-11-home-64-bit/19308839'
             }
         ]
     },
@@ -247,14 +258,18 @@ const thingsData: Thing[] = [
         ]
     },
     {
-        name: 'A (nice) car',
+        name: 'A 2026 Ford F-150',
         slug: 'car',
         icon: 'car',
         price: {
-            value: 40000, // 40k
-            currency: 'EUR'
+            value: 60000, // 60k
+            currency: 'CAD'
         },
-        sources: []
+        sources: [
+            {
+                text: "Fun fact: This model doesn't come with turn signals, and drivers are legally required to tailgate you within 30 cm until you finally cave and let them pass."
+            }
+        ]
     },
     {
         name: 'A decent Rolex',
@@ -267,7 +282,7 @@ const thingsData: Thing[] = [
         sources: []
     },
     {
-        name: 'A Cybertruck',
+        name: 'A Tesla Cybertruck',
         slug: 'tesla',
         icon: 'truck-electric',
         price: {
@@ -280,7 +295,7 @@ const thingsData: Thing[] = [
                 link: 'https://www.tesla.com/cybertruck/design#overview'
             },
             {
-                text: 'Costs a shitload for a pile of shit.'
+                text: 'Fun fact: it is literally impossible to have bought this car and to pretend you didn\'t know Musk was a nazi.'
             }
         ]
     },
@@ -356,18 +371,15 @@ const thingsData: Thing[] = [
         slug: 'steam',
         icon: 'tag',
         price: {
-            value: 1376016.97,
+            value: 1385598.5,
             currency: 'USD'
         },
         sources: [
             {
                 name: 'Buy All Steam Games',
-                date: '2025-07-16',
+                date: '2026-02-03',
+                text: 'This is the full price before discounts. Discounted price: ' + useFormat().currency(1337311.32, 0, 2, 'USD'),
                 link: 'https://steam.seewang.me/'
-            },
-            {
-                text: 'This is the full price before discounts. On average, you can expect a 35% discount, bringing the total to approximately ' +
-                    useFormat().formatPrice(1376016.97 * .65, 0, 2, 'USD') + '.'
             }
         ]
     },
@@ -396,19 +408,19 @@ const thingsData: Thing[] = [
         ]
     },
     {
-        name: 'A Titan Zeus 370-Inch 4K TV',
+        name: 'A Planar Luxe MicroLED 4K TV',
         slug: 'tv',
         icon: 'tv-minimal',
         price: {
-            value: 1600000, // 1.6M
+            value: 1595000, // 2.5M
             currency: 'USD'
         },
         sources: [
             {
-                name: 'Luxury Retail',
-                text: '<i>370-INCH, 4K, Tv Titan Zeus which is bigger than an elephant and cost $1.6million</i>',
-                date: '2013',
-                link: 'https://luxuryretail.co.uk/titan-zeus/'
+                name: 'TVLift',
+                text: '<i>A bespoke luxury TV for grand estates, this 217-inch MicroLED marvel turns an entire wall into a cinematic display. As one of the costliest TVs in the world, it’s often installed in penthouses and luxury yachts where size and performance meet sophistication.</i>',
+                date: '2025-08-18',
+                link: 'https://www.tvlift.com/blog/articles/the-10-most-expensive-tvs-in-the-world-luxury-televisions-that-redefine-home-entertainment/'
             }
         ]
     },
@@ -438,6 +450,9 @@ const thingsData: Thing[] = [
             currency: 'GBP'
         },
         sources: [
+            {
+                text: 'Fun fact: Trump doesn\'t need this toilet anymore; he just shits himself publicly instead.',
+            },
             {
                 name: 'CNN Style',
                 text: '<i>The satirical work, titled “America” by Italian conceptual artist Maurizio Cattelan, poked fun at ' +
@@ -516,6 +531,25 @@ const thingsData: Thing[] = [
         ]
     },
     {
+        name: 'Epstein island',
+        slug: 'epstein',
+        icon: 'tree-palm',
+        price: {
+            value: 60000000, // 60M
+            currency: 'USD'
+        },
+        sources: [
+            {
+                name: 'NPR',
+                text: "<i>The private islands that were a nexus in Jeffrey Epstein's depraved abuse and trafficking of young women and underage girls will be turned into a resort " +
+                    "destination by a U.S. billionaire. Great St. James and Little St. James have been in limbo since Epstein's death in 2019.<br>Financier Stephen Deckoff paid " +
+                    "$60 million for Great St. James and Little St. James through his SD Investments firm</i>",
+                date: '2023-05-04',
+                link: 'https://www.npr.org/2023/05/04/1173956903/jeffrey-epstein-island-sold-st-james'
+            }
+        ]
+    },
+    {
         name: 'A Falcon Heavy launch',
         slug: 'spacex',
         icon: 'rocket',
@@ -564,7 +598,7 @@ const thingsData: Thing[] = [
         ]
     },
     {
-        name: 'Trump\'s fucking ballroom',
+        name: 'Trump\'s ballroom',
         slug: 'ballroom',
         icon: 'construction',
         price: {
@@ -778,7 +812,7 @@ const thingsData: Thing[] = [
         slug: 'people',
         icon: 'person-standing',
         price: {
-            value: 8255287181, // 8.2 billion
+            value: stats.worldPopulation, // 8.2 billion
             currency: 'EUR'
         },
         sources: [
@@ -856,35 +890,16 @@ const thingsData: Thing[] = [
         slug: 'gaza',
         icon: 'hospital',
         price: {
-            value: 53200000000, // 53.2 billion
+            value: 70000000000, // 70 billion
             currency: 'USD'
         },
         sources: [
             {
-                name: 'France 24',
-                text: '<i>More than $53 billion will be required to rebuild Gaza and end the "humanitarian catastrophe" ' +
-                    'that has gripped the war-ravaged territory, including $20 billion in the first three years alone, ' +
-                    'the United Nations said Tuesday</i>',
-                date: '2025-02-11',
-                link: 'https://www.france24.com/en/live-news/20250211-at-least-53-billion-needed-to-rebuild-gaza-un-estimates'
-            }
-        ]
-    },
-    {
-        name: 'French 2026 defense budget',
-        slug: 'france-defense',
-        icon: 'flame',
-        price: {
-            value: 53700000000,// 53.7 billion
-            currency: 'EUR'
-        },
-        sources: [
-            {
-                name: 'France Info',
-                text: '<i>As it stands, the French Military Programming Law, passed in 2023 for the 2024–2030 period, ' +
-                    'allocates €413 billion to the armed forces, with annual budget increases of just over €3 billion, ' +
-                    'reaching €67.4 billion by 2030.</i> (translation)',
-                link: 'https://www.franceinfo.fr/societe/armee-securite-defense/infographie-de-32-milliards-en-2017-a-plus-de-67-prevus-en-2030-comment-le-budget-de-la-defense-francaise-a-evolue-ces-dernieres-annees_7374634.html'
+                name: 'The Guardian',
+                text: '<i>Israel’s war in Gaza has created a “human-made abyss”, and reconstruction is likely to cost more than $70bn (£53bn) over several decades, the United ' +
+                    'Nations has said.</i>',
+                date: '2025-11-25',
+                link: 'https://www.theguardian.com/world/2025/nov/25/rebuilding-human-made-abyss-gaza-un'
             }
         ]
     },
@@ -1026,18 +1041,14 @@ const thingsData: Thing[] = [
         slug: 'muskrat',
         icon: 'trash-2',
         price: {
-            value: 500100000000, // 500.1 billion
+            value: 852400000000, // 852.4 billion
             currency: 'USD'
         },
         sources: [
             {
-                name: 'BBC',
-                link: 'https://www.bbc.com/news/articles/c89d3547npjo',
-                date: '2025-10-01',
-            },
-            {
-                text: "The tech magnate's net worth briefly reached $500.1bn on Wednesday afternoon New York time, before dipping slightly to just over $499bn later in the day, " +
-                    "the Forbes billionaires index reported."
+                name: 'Forbes',
+                link: 'https://www.forbes.com/real-time-billionaires/',
+                date: '2026-02-03',
             }
         ]
     },
@@ -1118,7 +1129,7 @@ const thingsData: Thing[] = [
         slug: 'us-gdp',
         icon: 'chart-no-axes-combined',
         price: {
-            value: 30507000000000, // 30.5 trillion
+            value: 31821000000000, // 31.821 trillion
             currency: 'USD'
         },
         sources: [
