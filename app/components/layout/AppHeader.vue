@@ -3,7 +3,8 @@
         <template #left>
             <div class="flex items-center gap-8">
                 <NuxtLink to="/">
-                    <h1 class="w-auto shrink-0 text-xl text-primary font-semibold"
+                    <h1
+                        class="w-auto shrink-0 text-xl text-primary font-semibold"
                         @click="goToHome"
                     >
                         TrickleDown.js
@@ -18,10 +19,10 @@
             <UColorModeButton variant="ghost"></UColorModeButton>
 
             <UButton
-                @click="showAboutModal = true"
                 icon="lucide-info"
                 color="neutral"
                 variant="ghost"
+                @click="showAboutModal = true"
             ></UButton>
         </template>
 

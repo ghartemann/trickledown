@@ -190,7 +190,7 @@ const wagesData: Wage[] = [
             },
             {
                 text: 'As explained in the article, it is difficult to compare the growth of Musk\'s fortune with an ' +
-                    'income as such. However, it\s pretty clear that the purpose of this application is not so much ' +
+                    'income as such. However, it\'s pretty clear that the purpose of this application is not so much ' +
                     'to demonstrate great science as to highlight the great inequalities between rich folks and the rest of us. ' +
                     'Please read the About section for more information.',
             }

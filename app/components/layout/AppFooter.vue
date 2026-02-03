@@ -1,11 +1,18 @@
 <template>
     <UFooter>
         <div class="text-center text-xs">
-            <pre class="inline">v{{ version }}</pre>
+            <pre class="inline">
+                v{{ version }}
+            </pre>
 
             <div>
                 Created by
-                <ULink to="https://ghartemann.fr" target="_blank">ghartemann</ULink>
+                <ULink
+                    to="https://ghartemann.fr"
+                    target="_blank"
+                >
+                    ghartemann
+                </ULink>
                 © {{ year }}
             </div>
         </div>

@@ -24,8 +24,14 @@
 const taxRate = defineModel('taxRate', { type: Number });
 
 defineProps({
-    taxRateMin: Number,
-    taxRateMax: Number
+    taxRateMin: {
+        type: Number,
+        default: 0
+    },
+    taxRateMax: {
+        type: Number,
+        default: 0
+    }
 });
 
 const stepper = [

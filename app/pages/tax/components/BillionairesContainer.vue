@@ -1,7 +1,10 @@
 <template>
     <div class="flex flex-col gap-2">
         <h2>
-            People <ULink @click="scrollToAnchor('#you')">(and you!)</ULink>
+            People
+            <ULink @click="scrollToAnchor('#you')">
+                (and you!)
+            </ULink>
         </h2>
 
         <BillionaireCard
@@ -37,8 +40,8 @@
 <script setup>
 import { storeToRefs } from 'pinia';
 import useFormat from '~/composables/format.js';
+import stats from '~/constants/stats';
 import BillionaireCard from '~/pages/tax/components/BillionaireCard.vue';
-import stats from "~/constants/stats";
 
 const { scrollToAnchor } = useAnchorScroll();
 
