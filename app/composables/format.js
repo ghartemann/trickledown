@@ -1,16 +1,37 @@
 import currencies from "~/constants/currencies.js";
 
 export default function useFormat() {
-    function formatPrice(number, minimumFractionDigits = 0, maximumFractionDigits = 2, currency = 'EUR') {
-        return new Intl.NumberFormat(
-            'en-GB',
-            {
+    function currency(
+        value,
+        minimumFractionDigits = 0,
+        maximumFractionDigits = 2,
+        currency = 'EUR',
+        locale = 'en-US'
+    ) {
+        const number = Number(value);
+
+        if (!Number.isFinite(number)) {
+            return '—';
+        }
+
+        const isInteger = Number.isInteger(number);
+
+        const minFD = isInteger
+            ? minimumFractionDigits
+            : Math.max(2, minimumFractionDigits);
+
+        const maxFD = Math.max(minFD, maximumFractionDigits);
+
+        try {
+            return new Intl.NumberFormat(locale, {
                 style: 'currency',
-                currency: currency,
-                minimumFractionDigits: !Number.isFinite(number) || !Number.isInteger(number) ? 2 : minimumFractionDigits,
-                maximumFractionDigits
-            }
-        ).format(number);
+                currency,
+                minimumFractionDigits: minFD,
+                maximumFractionDigits: maxFD,
+            }).format(number);
+        } catch {
+            return `${number.toFixed(maxFD)} ${currency}`;
+        }
     }
 
     // la pire fonction que j'ai jamais écrite mdr
@@ -121,11 +142,14 @@ export default function useFormat() {
         return parts;
     }
 
-    function formatNumberNice(number, noSuffix = false) {
+    function formatNumberNice(number, noSuffix = false, minimumFractionDigits = 0, maximumFractionDigits = 2) {
         let formattedNumber;
 
         if (noSuffix) {
-            return new Intl.NumberFormat('fr-FR').format(Math.floor(number));
+            return new Intl.NumberFormat('fr-FR', {
+                maximumFractionDigits,
+                minimumFractionDigits
+            }).format(number);
         }
 
         switch (true) {
@@ -172,7 +196,7 @@ export default function useFormat() {
     }
 
     return {
-        formatPrice,
+        currency,
         formatNumberNice,
         formatHours,
         convertCurrency

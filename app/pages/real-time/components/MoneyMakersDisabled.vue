@@ -10,7 +10,10 @@
             </div>
         </div>
 
-        <div v-if="moneyMakers.length === 0" class="text-center text-xs text-gray-500 mt-4">
+        <div
+            v-if="moneyMakers.length === 0"
+            class="text-center text-xs text-gray-500 mt-4"
+        >
             No available wage type
         </div>
 
@@ -29,7 +32,7 @@
 </template>
 
 <script setup>
-import CardMoneyMaker from "~/components/cards/CardMoneyMaker.vue";
+import CardMoneyMaker from "~/pages/real-time/components/CardMoneyMaker.vue";
 
 defineProps({
     moneyMakers: {
