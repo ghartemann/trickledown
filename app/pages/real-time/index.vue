@@ -28,7 +28,7 @@ import wagesData from '~/constants/wagesData.ts';
 import MoneyMakersDisabled from '~/pages/real-time/components/MoneyMakersDisabled.vue';
 import MoneyMakersEnabled from '~/pages/real-time/components/MoneyMakersEnabled.vue';
 
-const rate = ref(32); // ~60fps
+const rate = ref(16); // ~60fps
 const timeElapsed = ref(0);
 const lastUpdateTime = ref(Date.now());
 const selectedTimeTab = ref('fulltime');
