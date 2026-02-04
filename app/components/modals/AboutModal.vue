@@ -90,7 +90,7 @@
                         </p>
 
                         <p class="text-sm">
-                            All this was created in a few days using <ULink to="https://nuxt.com/" target="_blank">Nuxt 3</ULink>,
+                            All this was created in a few days using <ULink to="https://nuxt.com/" target="_blank">Nuxt 4</ULink>,
                             <ULink to="https://ui.nuxt.com/" target="_blank">Nuxt UI</ULink> and
                             <ULink to="https://tailwindcss.com/" target="_blank">TailwindCSS</ULink>.
                             It is open source and can be found on

@@ -4,6 +4,16 @@ import stats from "~/constants/stats";
 
 const thingsData: Thing[] = [
     {
+        name: 'Coffee from a machine',
+        slug: 'coffee',
+        icon: 'coffee',
+        price: {
+            value: 0.3,
+            currency: 'EUR'
+        },
+        sources: []
+    },
+    {
         name: 'A baguette',
         slug: 'baguette',
         icon: 'ruler',
@@ -49,6 +59,16 @@ const thingsData: Thing[] = [
         icon: 'utensils',
         price: {
             value: 16,
+            currency: 'EUR'
+        },
+        sources: []
+    },
+    {
+        name: 'Avatar 3 IMAX 3D ticket',
+        slug: 'avatar',
+        icon: 'clapperboard',
+        price: {
+            value: 26.4,
             currency: 'EUR'
         },
         sources: []

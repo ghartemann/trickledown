@@ -32,7 +32,7 @@
                         <UBadge
                             :color="variation > 0 ? 'error' : 'success'"
                             :icon="variation > 0 ? 'i-lucide-arrow-up' : 'i-lucide-arrow-down'"
-                            class="hidden md:block "
+                            class="hidden md:flex "
                         >
                             {{ useFormat().currency(Math.abs(variation), 0, 0, 'USD') }}
                         </UBadge>

@@ -41,7 +41,7 @@
 
             <div class="space-y-2">
                 <h2 class="text-center text-xs text-balance">
-                    Time it'll take to buy one of these (and <span class="underline font-semibold">nothing</span> else),
+                    Time it would take to buy one of these things (and <span class="underline font-semibold">nothing</span> else),
                     working:
                 </h2>
 
@@ -120,7 +120,7 @@ const explanation = [
     },
     {
         text: 'In both cases, it does not take into account any taxes or other deductions that may apply to your ' +
-            'income, or any other expenses you may have.'
+            'income, or any other expenses you may have. This is a gamified simulation.'
     }
 ];
 </script>
