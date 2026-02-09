@@ -60,7 +60,7 @@ const you = ref({
     personName: 'You',
     source: 'Nothing much, probably',
     finalWorth: 0.05,
-    rank: Math.round(stats.worldPopulation * 0.16),
+    rank: Math.round(stats.worldPopulation * 0.16 + 1),
     estWorthPrev: 0.05
 });
 </script>
