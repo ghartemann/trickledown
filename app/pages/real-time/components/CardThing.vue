@@ -46,8 +46,8 @@
                         >
                             <!-- cet homme emmerde ses collègues avec ça toute la sainte journée et pourtant quand il est seul...-->
                             <div
-                                @click="() => {if (!timeTruncated) tooltipTime = false}"
                                 class="text-xs text-gray-500 select-none"
+                                @click="() => {if (!timeTruncated) tooltipTime = false}"
                             >
                                 {{ useFormat().formatHours(timeItllTake, true, true).join(' ') }}
                             </div>

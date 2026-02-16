@@ -1,5 +1,8 @@
 <template>
-    <div ref="containerRef" class="overflow-x-auto smooth-scroll">
+    <div
+        ref="containerRef"
+        class="overflow-x-auto smooth-scroll"
+    >
         <TransitionGroup
             tag="div"
             name="fade-down"
@@ -17,24 +20,25 @@
                 </NuxtPlaceholder>
             </div>
 
-            <div class="p-2 snap-center shrink-0 grow-0"
-                 v-for="moneyMaker in moneyMakers"
-                 :key="moneyMaker.name"
+            <div
+                v-for="moneyMaker in moneyMakers"
+                :key="moneyMaker.name"
+                class="p-2 snap-center shrink-0 grow-0"
             >
-                <card-money-maker
+                <CardMoneyMaker
                     v-model="selectedTimeTab"
                     :money-maker="moneyMaker"
                     :time-elapsed="timeElapsed"
-                    class="!w-full grow-0 shrink-0"
-                ></card-money-maker>
+                    class="w-full! grow-0 shrink-0"
+                ></CardMoneyMaker>
             </div>
         </TransitionGroup>
     </div>
 </template>
 
 <script setup>
-import CardMoneyMaker from "~/pages/real-time/components/CardMoneyMaker.vue";
-import NuxtPlaceholder from "~/components/NuxtPlaceholder.vue";
+import NuxtPlaceholder from '~/components/NuxtPlaceholder.vue';
+import CardMoneyMaker from '~/pages/real-time/components/CardMoneyMaker.vue';
 
 defineProps({
     moneyMakers: {

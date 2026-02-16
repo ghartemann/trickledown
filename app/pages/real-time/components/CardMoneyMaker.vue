@@ -3,7 +3,12 @@
         <div class="flex justify-between items-center">
             <div>
                 {{ moneyMaker.name }}
-                <span v-if="moneyMaker.subName" class="text-xs text-gray-500"> {{ moneyMaker.subName }}</span>
+                <span
+                    v-if="moneyMaker.subName"
+                    class="text-xs text-gray-500"
+                >
+                    {{ moneyMaker.subName }}
+                </span>
             </div>
 
             <USwitch v-model="moneyMaker.displayed"></USwitch>
@@ -78,10 +83,10 @@
 </template>
 
 <script setup>
-import useFormat from "~/composables/format.js";
-import CardThing from "~/pages/real-time/components/CardThing.vue";
-import TooltipSources from "~/components/TooltipSources.vue";
-import useThings from "~/composables/useThings.js";
+import TooltipSources from '~/components/TooltipSources.vue';
+import useFormat from '~/composables/format.js';
+import useThings from '~/composables/useThings.js';
+import CardThing from '~/pages/real-time/components/CardThing.vue';
 
 defineProps({
     moneyMaker: {
@@ -89,13 +94,14 @@ defineProps({
         required: true
     },
     timeElapsed: {
-        type: Number
+        type: Number,
+        default: 0
     }
 });
 
 const things = useThings().getThings();
 
-const selectedTimeTab = defineModel();
+const selectedTimeTab = defineModel({ type: String });
 
 const tabs = [
     {

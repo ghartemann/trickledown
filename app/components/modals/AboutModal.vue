@@ -62,9 +62,15 @@
                             :key="index"
                         >
                             <div class="flex items-center gap-4">
-                                <UIcon name="i-lucide-bookmark" class="size-6 text-gray-500 shrink-0 grow-0"></UIcon>
+                                <UIcon
+                                    name="i-lucide-bookmark"
+                                    class="size-6 text-gray-500 shrink-0 grow-0"
+                                ></UIcon>
 
-                                <USeparator orientation="vertical" class="h-12"/>
+                                <USeparator
+                                    orientation="vertical"
+                                    class="h-12"
+                                ></USeparator>
 
                                 <div>
                                     <div class="font-bold mb-1">
@@ -86,24 +92,23 @@
                 >
                     <div class="space-y-4">
                         <p class="text-sm">
-                            This app was made in 🇫🇷 France!
+                            This app was made in 🇫🇷 France in a few days using
+                            <ULink to="https://nuxt.com/" target="_blank">Nuxt 4</ULink>
+                            ,
+                            <ULink to="https://ui.nuxt.com/" target="_blank">Nuxt UI</ULink>
+                            and
+                            <ULink to="https://tailwindcss.com/" target="_blank">TailwindCSS</ULink>
+                            .
                         </p>
 
-                        <p class="text-sm">
-                            All this was created in a few days using <ULink to="https://nuxt.com/" target="_blank">Nuxt 4</ULink>,
-                            <ULink to="https://ui.nuxt.com/" target="_blank">Nuxt UI</ULink> and
-                            <ULink to="https://tailwindcss.com/" target="_blank">TailwindCSS</ULink>.
-                            It is open source and can be found on
-                            <ULink to="https://github.com/ghartemann/moneymaker" target="_blank">Github</ULink>.
-                        </p>
-
-                        <p class="text-sm">
-                            It is not perfect and there are many things to improve. If you have any suggestions or
-                            encounter any bugs, please feel free to
-                            <ULink to="https://github.com/ghartemann/moneymaker/issues/new" target="_blank">
-                                open an issue on the Github repository
-                            </ULink>.
-                        </p>
+                        <ULink href="https://www.buymeacoffee.com/ghartemann" target="_blank">
+                            <img
+                                src="https://cdn.buymeacoffee.com/buttons/v2/default-black.png"
+                                alt="Buy Me A Coffee"
+                                style="height: 60px !important;width: 217px !important;"
+                                class="hover:scale-105 transition-all"
+                            >
+                        </ULink>
                     </div>
                 </UCard>
             </div>

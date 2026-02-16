@@ -21,18 +21,18 @@
             v-else
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
         >
-            <card-money-maker
+            <CardMoneyMaker
                 v-for="moneyMaker in moneyMakers"
                 :key="moneyMaker.name"
                 v-model="selectedTimeTab"
                 :money-maker="moneyMaker"
-            ></card-money-maker>
+            ></CardMoneyMaker>
         </div>
     </div>
 </template>
 
 <script setup>
-import CardMoneyMaker from "~/pages/real-time/components/CardMoneyMaker.vue";
+import CardMoneyMaker from '~/pages/real-time/components/CardMoneyMaker.vue';
 
 defineProps({
     moneyMakers: {
@@ -41,7 +41,7 @@ defineProps({
     }
 });
 
-const selectedTimeTab = defineModel();
+const selectedTimeTab = defineModel({ type: String });
 </script>
 
 <style scoped>

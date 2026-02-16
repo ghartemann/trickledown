@@ -34,7 +34,11 @@
                         class="text-gray-500"
                     >
                         Source<span v-if="source.date"> ({{ source.date }})</span>:
-                        <ULink :to="source.link" class="underline" target="_blank">
+                        <ULink
+                            :to="source.link"
+                            class="underline"
+                            target="_blank"
+                        >
                             {{ source.name }}
                         </ULink>
                     </div>
