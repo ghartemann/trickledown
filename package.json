@@ -20,7 +20,7 @@
         "@tailwindcss/vite": "^4.1.18",
         "@vueuse/core": "^14.2.1",
         "commander": "^14.0.2",
-        "eslint": "^9.39.1",
+        "eslint": "^10.0.0",
         "eslint-plugin-vue": "^10.7.0",
         "nuxt": "^4.2.2",
         "nuxt-anchorscroll": "^1.0.5",
