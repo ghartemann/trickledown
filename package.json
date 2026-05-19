@@ -22,7 +22,7 @@
         "commander": "^14.0.2",
         "eslint": "^9.39.1",
         "eslint-plugin-vue": "^10.7.0",
-        "nuxt": "^4.2.2",
+        "nuxt": "^4.4.6",
         "nuxt-anchorscroll": "^1.0.5",
         "pinia": "^3.0.4",
         "release-it": "^20.0.0",
