@@ -13,19 +13,19 @@
         "release": "release-it"
     },
     "dependencies": {
-        "@iconify-json/lucide": "^1.2.86",
+        "@iconify-json/lucide": "^1.2.109",
         "@nuxt/eslint": "^1.12.1",
-        "@nuxt/ui": "^4.4.0",
+        "@nuxt/ui": "^4.8.0",
         "@pinia/nuxt": "^0.11.3",
         "@tailwindcss/vite": "^4.1.18",
         "@vueuse/core": "^14.2.1",
         "commander": "^14.0.2",
         "eslint": "^9.39.1",
         "eslint-plugin-vue": "^10.7.0",
-        "nuxt": "^4.2.2",
+        "nuxt": "^4.4.6",
         "nuxt-anchorscroll": "^1.0.5",
         "pinia": "^3.0.4",
-        "release-it": "^20.0.0",
+        "release-it": "^20.0.1",
         "tailwind-merge": "^3.4.0",
         "tailwindcss-animate": "^1.0.7",
         "typescript": "^5.9.3"
