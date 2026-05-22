@@ -176,20 +176,18 @@ const wagesData: Wage[] = [
     {
         name: 'Elon Musk',
         subName: 'Tesla, Twitter, SpaceX CEO',
-        hourlyWage: 23110000 * currencies.usdToEur,
+        hourlyWage: 29083333 * currencies.usdToEur,
         displayed: true,
         sources: [
             {
-                name: 'Yahoo! Finance',
-                text: '<i>For a leap year like 2024, that breaks down to approximately $554.64 million a day, $23.11 ' +
-                    'million an hour or a jaw-dropping $6,420 per second. While these numbers make for great trivia, ' +
-                    'they\'re not reflective of an hourly wage – it\'s more about the rapid growth of his assets, ' +
-                    'primarily tied to Tesla and SpaceX stock.</i>',
-                date: '2025-01-21',
-                link: 'https://finance.yahoo.com/news/elon-musk-richest-man-world-151517895.html'
+                name: 'GO Banking Rates',
+                text: '<i>Going a step further, we can quickly calculate that $698 million, when divided by 24 in order to determine an hourly rate of income, comes out to about ' +
+                    '$29,083,333.</i>',
+                date: '2025-12-16',
+                link: 'https://www.gobankingrates.com/money/wealth/elon-musk-makes-698-million-per-day-here-is-what-he-earns-while-you-sleep'
             },
             {
-                text: 'As explained in the article, it is difficult to compare the growth of Musk\'s fortune with an ' +
+                text: 'It is difficult to compare the growth of Musk\'s fortune with an ' +
                     'income as such. However, it\'s pretty clear that the purpose of this application is not so much ' +
                     'to demonstrate great science as to highlight the great inequalities between rich folks and the rest of us. ' +
                     'Please read the About section for more information.',

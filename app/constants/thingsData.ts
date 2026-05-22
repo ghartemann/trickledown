@@ -8,7 +8,7 @@ const thingsData: Thing[] = [
         slug: 'coffee',
         icon: 'coffee',
         price: {
-            value: 0.3,
+            value: 0.4,
             currency: 'EUR'
         },
         sources: []
@@ -78,7 +78,7 @@ const thingsData: Thing[] = [
         slug: 'metro',
         icon: 'credit-card',
         price: {
-            value: 104.5,
+            value: 110,
             currency: 'CAD'
         },
         sources: []
@@ -130,17 +130,17 @@ const thingsData: Thing[] = [
         slug: 'ps5',
         icon: 'gamepad-2',
         price: {
-            value: 529.99,
+            value: 649.99,
             currency: 'EUR'
         },
         sources: []
     },
     {
-        name: 'An iPhone 16 Pro',
+        name: 'An iPhone 17 PRO',
         slug: 'iphone',
         icon: 'smartphone',
         price: {
-            value: 1229,
+            value: 1329,
             currency: 'EUR'
         },
         sources: []
@@ -315,7 +315,7 @@ const thingsData: Thing[] = [
                 link: 'https://www.tesla.com/cybertruck/design#overview'
             },
             {
-                text: 'Fun fact: it is literally impossible to have bought this car and to pretend you didn\'t know Musk was a nazi.'
+                text: 'Fun fact: it is literally impossible to have bought this car and to pretend you didn\'t know the trash pile known as Elon Musk was a nazi.'
             }
         ]
     },
@@ -618,24 +618,6 @@ const thingsData: Thing[] = [
         ]
     },
     {
-        name: 'Trump\'s ballroom',
-        slug: 'ballroom',
-        icon: 'construction',
-        price: {
-            value: 300000000, // 300 million
-            currency: 'USD'
-        },
-        sources: [
-            {
-                name: 'BBC',
-                date: '2025-10-24',
-                link: 'https://www.bbc.com/news/articles/c891yxgj44ko',
-                text: '<i>A full list revealing the wealthy donors and corporations paying for US President Donald Trump\'s new $300m(£225m) White House ballroom has been ' +
-                    'released by the Trump administration.</i>'
-            }
-        ]
-    },
-    {
         name: 'GTA V dev + marketing',
         slug: 'gta-v',
         icon: 'siren',
@@ -775,6 +757,24 @@ const thingsData: Thing[] = [
         ]
     },
     {
+        name: 'Trump\'s ballroom',
+        slug: 'ballroom',
+        icon: 'construction',
+        price: {
+            value: 1000000000, // 1 billion
+            currency: 'USD'
+        },
+        sources: [
+            {
+                name: 'Forbes',
+                date: '2026-05-20',
+                link: 'https://www.bbc.com/news/articles/c891yxgj44ko',
+                text: '<i>Senators are expected to cast their first votes today on $1 billion in funding for President Donald Trump’s White House ballroom project—but a small ' +
+                    'group of Republicans are threatening to block the package. </i>'
+            }
+        ]
+    },
+    {
         name: 'Burj Khalifa',
         slug: 'burj-khalifa',
         icon: 'move-up',
@@ -786,6 +786,31 @@ const thingsData: Thing[] = [
             {
                 name: 'Wikipedia',
                 link: 'https://en.wikipedia.org/wiki/Burj_Khalifa'
+            }
+        ]
+    },
+    {
+        name: 'Trump-IRS settlement',
+        slug: 'irs',
+        icon: 'hand-coins',
+        price: {
+            value: 1776000000, // 1.776 billion
+            currency: 'USD'
+        },
+        sources: [
+            {
+                name: 'Forbes',
+                text: '<i>After the disclosure of his tax return information, Trump sued the IRS for $10 billion in damages. In the settlement of Trump v. Internal Revenue ' +
+                    'Service, acting Attorney General Todd Blanche agreed that the government would create a fund totaling $1,776,000,000 for an Anti-Weaponization Fund, to ' +
+                    'compensate individuals who were wrongfully targeted by prior administrations.</i>',
+                date: '2026-05-20',
+                link: 'https://www.forbes.com/sites/nathangoldman/2026/05/20/3-key-takeaways-from-trumps-irs-settlement--tax-immunity-controversy/'
+            },
+            {
+                name: 'Youtube',
+                text: 'This FUCKING GUY sued HIS OWN DEPARTMENT for disclosing information HE WAS SUPPOSED TO DISCLOSE HIMSELF and settled over a BULLSHIT FUND aiming at ' +
+                    'BRIBING PEOPLE and compensate TRAITORS RESPONSIBLE FOR JAN 6. A 1.776B$ fund. 1776. Could this fucking country get any more stupid and insane??',
+                link: 'https://www.youtube.com/watch?v=tIBCjzz-bmk'
             }
         ]
     },
@@ -805,25 +830,6 @@ const thingsData: Thing[] = [
                     'estimated value of 671 million U.S. dollars.</i>',
                 date: '2024-06-26',
                 link: 'https://www.statista.com/statistics/922212/leading-theme-parks-based-on-value-in-europe'
-            }
-        ]
-    },
-    {
-        name: 'Trump\'s Truth Social stake',
-        slug: 'truth-social',
-        icon: 'trending-down',
-        price: {
-            value: 2300000000, // 2.3 billion
-            currency: 'USD'
-        },
-        sources: [
-            {
-                name: 'Financial Times',
-                text: '<i>The filing with the Securities and Exchange Commission late on Tuesday showed that Trump’s ' +
-                    '114mn shares are included in the sale, which will take place “from time to time in one or more ' +
-                    'offerings”. The stake is worth about $2.3bn and held in a trust controlled by his son Donald Trump Jr.</i>',
-                // date: 'TODO',
-                link: 'https://www.ft.com/content/1b41e7c2-c835-4aa0-b874-6f8a8add107e'
             }
         ]
     },
