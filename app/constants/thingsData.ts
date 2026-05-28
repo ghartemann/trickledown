@@ -1097,6 +1097,48 @@ const thingsData: Thing[] = [
         ]
     },
     {
+        name: 'OpenAI\'s valuation',
+        slug: 'open-ai',
+        icon: 'sparkle',
+        price: {
+            value: 965000000000, // 965 billion
+            currency: 'USD'
+        },
+        sources: [
+            {
+                name: 'Reuters',
+                text: '<i>The new valuation after the series H funding round puts Anthropic ahead of OpenAI, last valued at $852 billion post-money in March, intensifying a ' +
+                    'fierce battle between the two for dominance in the rapidly evolving AI sector.</i>',
+                link: 'https://www.reuters.com/business/anthropic-raises-65-billion-now-valued-965-billion-2026-05-28/',
+                date: '2026-05-28'
+            },
+            {
+                text: 'This is definitely not a bubble. This is totally real money and it\'s gonna trickle down any time now.'
+            }
+        ]
+    },
+    {
+        name: 'Anthropic\'s valuation',
+        slug: 'anthropic',
+        icon: 'sparkle',
+        price: {
+            value: 965000000000, // 965 billion
+            currency: 'USD'
+        },
+        sources: [
+            {
+                name: 'Reuters',
+                text: '<i>Anthropic said on Thursday it has raised $65 billion at a post-money valuation of $965 billion, as it aims to bolster computing capacity to meet ' +
+                    'growing demand for chatbot Claude and scale its products.</i>',
+                link: 'https://www.reuters.com/business/anthropic-raises-65-billion-now-valued-965-billion-2026-05-28/',
+                date: '2026-05-28'
+            },
+            {
+                text: '...aaaaaaaany time now...'
+            }
+        ]
+    },
+    {
         name: 'War in Iraq (the last one)',
         slug: 'us-iraq-war',
         icon: 'moon-star',
