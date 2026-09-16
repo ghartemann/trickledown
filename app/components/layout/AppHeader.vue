@@ -51,16 +51,22 @@ const showAboutModal = ref(false);
 
 const items = computed(() => [
     {
-        label: 'Real time mode',
+        label: 'Real time trickledown',
         icon: 'i-lucide-timer',
         to: '/real-time',
         active: route.path.startsWith('/real-time')
     },
     {
-        label: 'Tax mode',
+        label: 'Tax Simulator 2027',
         icon: 'i-lucide-hand-coins',
         to: '/tax',
         active: route.path.startsWith('/tax')
+    },
+    {
+        label: 'Life expectancy information',
+        icon: 'i-lucide-heart-pulse',
+        to: '/life-expectancy',
+        active: route.path.startsWith('/life-expectancy')
     }
 ]);
 

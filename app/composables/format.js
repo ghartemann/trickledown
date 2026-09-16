@@ -1,4 +1,4 @@
-import currencies from "~/constants/currencies.js";
+import currencies from '~/constants/currencies.js';
 
 export default function useFormat() {
     function currency(
@@ -27,7 +27,7 @@ export default function useFormat() {
                 style: 'currency',
                 currency,
                 minimumFractionDigits: minFD,
-                maximumFractionDigits: maxFD,
+                maximumFractionDigits: maxFD
             }).format(number);
         } catch {
             return `${number.toFixed(maxFD)} ${currency}`;
@@ -61,7 +61,7 @@ export default function useFormat() {
             const unit = months > 1 ? 'months' : 'month';
             parts.push(`${months} ${unit}`);
 
-            if (roughly && months > 0 ) {
+            if (roughly && months > 0) {
                 parts.unshift('~');
                 return parts;
             }
@@ -180,6 +180,45 @@ export default function useFormat() {
         return formattedNumber;
     }
 
+    function getAge(dob, dod) {
+        const birthDate = new Date(dob);
+        const end = dod ? new Date(dod) : new Date();
+
+        return ((end.getTime() - birthDate.getTime()) / (365.2425 * 24 * 60 * 60 * 1000));
+    }
+
+    function formatAge(rawAge) {
+        let toReturn = '';
+
+        const years = Math.floor(rawAge);
+        const remainingYears = rawAge - years;
+        const months = Math.floor(remainingYears * 12);
+        const remainingMonths = (remainingYears * 12) - months;
+        const days = Math.floor(remainingMonths * 30.436875);
+
+        if (Math.abs(years) > 0) {
+            toReturn += `${years} years, `;
+        }
+
+        if (Math.abs(months) > 0) {
+            toReturn += `${months} months, `;
+        }
+
+        if (Math.abs(days) > 0) {
+            toReturn += `${days} days`;
+        }
+
+        return toReturn;
+    }
+
+    function formatDate(date) {
+        return new Intl.DateTimeFormat('en', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric'
+        }).format(new Date(date));
+    }
+
     function convertCurrency(value, currency) {
         if (!value || !currency || currency === 'EUR') {
             return value;
@@ -199,6 +238,9 @@ export default function useFormat() {
         currency,
         formatNumberNice,
         formatHours,
+        getAge,
+        formatAge,
+        formatDate,
         convertCurrency
     };
 }
