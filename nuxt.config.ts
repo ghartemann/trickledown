@@ -14,10 +14,11 @@ export default defineNuxtConfig({
     },
 
     modules: [
-        '@nuxt/eslint',
-        '@nuxt/ui',
-        '@pinia/nuxt',
-        'nuxt-anchorscroll',
+      '@nuxt/eslint',
+      '@nuxt/ui',
+      '@pinia/nuxt',
+      'nuxt-anchorscroll',
+      '@nuxt/image'
     ],
 
     app: {

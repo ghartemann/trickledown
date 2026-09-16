@@ -7,21 +7,37 @@
                     :description="vip.source"
                     :avatar="{
                         src: vip.squareImage,
-                        alt: vip.name
+                        alt: vip.name,
+                        text: (vip.name.match(/\p{Lu}/gu) || []).join('')
                     }"
                     size="lg"
-                ></UUser>
+                >
+                    <template #name>
+                        <div class="flex items-center gap-2">
+                            <span>{{ vip.name }}</span>
 
-                <div>
-                    <UBadge
-                        variant="soft"
-                        :color="lifeBadge.color"
-                        class="text-xs"
-                        :icon="lifeBadge.icon"
-                    >
-                        {{ lifeBadge.label }}
-                    </UBadge>
-                </div>
+                            <UBadge
+                                variant="soft"
+                                :color="lifeBadge.color"
+                                class="xl:hidden uppercase"
+                                :icon="lifeBadge.icon"
+                                size="sm"
+                            >
+                                {{ lifeBadge.label }}
+                            </UBadge>
+                        </div>
+                    </template>
+                </UUser>
+
+                <UBadge
+                    variant="soft"
+                    :color="lifeBadge.color"
+                    class="hidden xl:flex uppercase"
+                    :icon="lifeBadge.icon"
+                    size="sm"
+                >
+                    {{ lifeBadge.label }}
+                </UBadge>
             </div>
         </template>
 
@@ -55,7 +71,7 @@
 
                 <UProgress
                     :model-value="lifePercentage"
-                    :color="vip.dod ? 'success' : lifePercentage === 100 ? 'error' : lifePercentage >= 80 ? 'success' : 'warning'"
+                    :color="vip.dod && lifePercentage < 100 ? 'success' : lifePercentage === 100 ? 'error' : lifePercentage >= 80 ? 'success' : 'warning'"
                 ></UProgress>
 
                 <div class="mt-1 text-center text-sm italic text-gray-500">
@@ -158,8 +174,8 @@ const data = computed(() => {
 
     d.push(
         {
-            name: `Life expectancy (${props.vip.countryCode.toUpperCase()}, ${props.vip.isMale ? 'males' : 'females'})`,
-            value: props.generalLifeExpectancy + ' years',
+            name: 'Life expectancy',
+            value: props.generalLifeExpectancy + ` years (${props.vip.countryCode.toUpperCase()}, ${props.vip.isMale ? '' : 'fe'}males)`,
             icon: 'i-lucide-heart-pulse'
         },
         {
@@ -181,7 +197,7 @@ const lifeBadge = computed(() => {
             icon: 'i-lucide-check-circle',
             label: percentage >= 100
                 ? 'winner winner chicken dinner'
-                : 'oopsie'
+                : 'busted'
         };
     }
 
@@ -189,21 +205,21 @@ const lifeBadge = computed(() => {
         return {
             color: 'error',
             icon: 'i-lucide-triangle-alert',
-            label: 'any minute now...'
+            label: 'overdue'
         };
     }
 
     if (percentage > 90) {
         return {
             icon: 'i-lucide-hourglass',
-            label: 'almost done'
+            label: 'final stretch'
         };
     }
 
     if (percentage > 80) {
         return {
             icon: 'i-lucide-hourglass',
-            label: 'working on it'
+            label: 'almost there'
         };
     }
 
@@ -218,7 +234,7 @@ const lifeBadge = computed(() => {
     return {
         color: 'warning',
         icon: 'i-lucide-hourglass',
-        label: 'still a long time to go'
+        label: 'plenty of time'
     };
 });
 </script>

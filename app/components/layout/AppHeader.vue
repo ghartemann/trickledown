@@ -64,7 +64,7 @@ const items = computed(() => [
     },
     {
         label: 'Life expectancy information',
-        icon: 'i-lucide-hand-coins',
+        icon: 'i-lucide-heart-pulse',
         to: '/life-expectancy',
         active: route.path.startsWith('/life-expectancy')
     }
