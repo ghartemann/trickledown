@@ -46,7 +46,7 @@
                     :life-expectancies="lifeExpectancies"
                 ></VipContainer>
 
-                <USeparator class="mt-16 mb-2 col-span-full"></USeparator>
+                <USeparator class="mt-8 lg:mt-16 mb-2 col-span-full"></USeparator>
 
                 <div class="text-xs text-gray-500 italic col-span-full flex items-center justify-center gap-4">
                     <UIcon name="i-lucide-arrow-down"></UIcon>
@@ -58,7 +58,7 @@
                     <UIcon name="i-lucide-arrow-down"></UIcon>
                 </div>
 
-                <USeparator class="mt-2 mb-16 col-span-full"></USeparator>
+                <USeparator class="mt-2 mb-8 lg:mb-16 col-span-full"></USeparator>
 
                 <VipContainer
                     class="col-span-full"

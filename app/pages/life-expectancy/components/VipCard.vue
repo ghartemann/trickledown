@@ -8,7 +8,8 @@
                     :avatar="{
                         src: vip.squareImage,
                         alt: vip.name,
-                        text: (vip.name.match(/\p{Lu}/gu) || []).join('')
+                        text: (vip.name.match(/\p{Lu}/gu) || []).join(''),
+                        class: {'grayscale': vip.dod}
                     }"
                     size="lg"
                 >
@@ -71,7 +72,7 @@
 
                 <UProgress
                     :model-value="lifePercentage"
-                    :color="vip.dod && lifePercentage < 100 ? 'success' : lifePercentage === 100 ? 'error' : lifePercentage >= 80 ? 'success' : 'warning'"
+                    :color="vip.dod && lifePercentage < 100 ? 'success' : lifePercentage === 100 ? 'error' : lifePercentage >= 70 ? 'success' : 'warning'"
                 ></UProgress>
 
                 <div class="mt-1 text-center text-sm italic text-gray-500">
@@ -79,7 +80,7 @@
                         <span>
                             {{ lifePercentage < 100
                             ? 'they still had '
-                            : 'exceeded their life expectancy by ' }}
+                            : 'exceeded life exp. by ' }}
                         </span>
 
                         <span class="font-semibold">
@@ -87,13 +88,13 @@
                         </span>
 
                         <span v-if="lifePercentage < 100">
-                            left, what a shame
+                            left :((((
                         </span>
                     </template>
 
                     <template v-else>
                         <span v-if="lifePercentage === 100">
-                            exceeded their life expectancy by
+                            exceeded life exp. by
                         </span>
 
                         <span class="font-semibold">
@@ -167,7 +168,7 @@ const data = computed(() => {
     } else {
         d.push({
             name: 'Dead',
-            value: format.formatDate(props.vip.dod) + ' (at age ' + Math.floor(age.value) + ')',
+            value: format.formatDate(props.vip.dod) + ' (at ' + Math.floor(age.value) + ')',
             icon: 'i-lucide-skull'
         });
     }
@@ -175,7 +176,7 @@ const data = computed(() => {
     d.push(
         {
             name: 'Life expectancy',
-            value: props.generalLifeExpectancy + ` years (${props.vip.countryCode.toUpperCase()}, ${props.vip.isMale ? '' : 'fe'}males)`,
+            value: props.generalLifeExpectancy + ` years (${props.vip.countryCode.toUpperCase()}, ${props.vip.isMale ? 'M' : 'F'})`,
             icon: 'i-lucide-heart-pulse'
         },
         {
@@ -209,21 +210,28 @@ const lifeBadge = computed(() => {
         };
     }
 
-    if (percentage > 90) {
+    if (percentage >= 90) {
         return {
             icon: 'i-lucide-hourglass',
             label: 'final stretch'
         };
     }
 
-    if (percentage > 80) {
+    if (percentage >= 80) {
         return {
             icon: 'i-lucide-hourglass',
             label: 'almost there'
         };
     }
 
-    if (percentage > 45 && percentage <= 55) {
+    if (percentage >= 70) {
+        return {
+            icon: 'i-lucide-hourglass',
+            label: 'working on it'
+        };
+    }
+
+    if (percentage >= 45 && percentage < 60) {
         return {
             color: 'warning',
             icon: 'i-lucide-hourglass',

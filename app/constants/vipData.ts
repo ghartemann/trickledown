@@ -12,7 +12,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Elon Musk',
-        source: 'Self-made human failure, will die alone with no friends',
+        source: 'Self-made failure, will die alone with no friends',
         squareImage: 'https://imageio.forbes.com/specials-images/imageserve/62d700cd6094d2c180f269b9/0x0.jpg?format=jpg&crop=959,959,x0,y0,safe&fit=bounds',
         dob: '1971-06-28',
         country: 'USA (born South African)',
@@ -30,7 +30,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Jeff Bezos',
-        source: 'Billionaire, Amazon founder, taste-lacking imbecile',
+        source: 'Billionaire, taste-lacking imbecile',
         squareImage: 'https://imageio.forbes.com/specials-images/imageserve/67531eb2b5f7c9e191f632d7/0x0.jpg?format=jpg&crop=711,713,x316,y125,safe&fit=bounds',
         dob: '1964-01-12',
         country: 'USA',
@@ -39,7 +39,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Peter Thiel',
-        source: 'Billionaire, self-proclaimed antechrist, wannabe dictator',
+        source: 'Billionaire, self-proclaimed antechrist',
         squareImage: 'https://specials-images.forbesimg.com/imageserve/5a836fff31358e4955ad6549/416x416.jpg?background=000000&cropX1=234&cropX2=790&cropY1=7&cropY2=563',
         dob: '1967-10-11',
         country: 'USA (born West German)',
@@ -49,6 +49,7 @@ const vipData: Vip[] = [
     {
         name: 'Pierre-Édouard Stérin',
         source: 'Billionaire, far right activist, christian extremist',
+        squareImage: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flessentieldeleco.fr%2Fwp-content%2Fuploads%2F2024%2F07%2Fdfvvdf.jpg&f=1&nofb=1&ipt=95a4041a0f23554f4b07d4990d78693ae2bc428f378c0ca867e507a4b4bacc6b',
         dob: '1974-01-03',
         country: 'France',
         countryCode: 'fr',
@@ -65,7 +66,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Benjamin Netanyahu',
-        source: 'Genocidal maniac, dictator, Prime Minister of Israel',
+        source: 'Genocidal maniac, dictator, zionist turd',
         squareImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Benjamin_Netanyahu%2C_February_2023.jpg/500px-Benjamin_Netanyahu%2C_February_2023.jpg',
         dob: '1949-10-21',
         country: 'Israel',
@@ -83,7 +84,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Vladimir Putin',
-        source: 'President of Russia, dictator, Vlad the Invader',
+        source: 'President, dictator, Vlad the Invader',
         squareImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%9F%D1%83%D1%82%D0%B8%D0%BD_%2808-03-2024%29_%28cropped%29_%28higher_res%29.jpg/500px-%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%9F%D1%83%D1%82%D0%B8%D0%BD_%2808-03-2024%29_%28cropped%29_%28higher_res%29.jpg',
         dob: '1952-10-07',
         country: 'Russia',
@@ -92,7 +93,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Stephen Miller',
-        source: 'Literal Nazi, Goebbels wannabe, White House official',
+        source: 'Nazi, Goebbels wannabe, White House official',
         squareImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Stephen_Miller_July_2025.jpg/500px-Stephen_Miller_July_2025.jpg',
         dob: '1985-08-23',
         country: 'USA',
@@ -119,7 +120,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Nick Fuentes',
-        source: 'Christian nationalist, neonazi, thinks women shouldn\'t vote',
+        source: 'Christian nationalist, neonazi, incel',
         squareImage: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Nick_Fuentes_screencap_from_July_2022_virtual_debate.png',
         dob: '1998-08-18',
         country: 'USA',
@@ -128,7 +129,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Andrew Tate',
-        source: 'Nearly convicted human trafficker, misogynistic douchebag',
+        source: 'Human trafficker, misogynistic douchebag',
         squareImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Andrew_Tate_-_James_Tamim_Upload_%28Cropped_Wide_Portrait%29.png/500px-Andrew_Tate_-_James_Tamim_Upload_%28Cropped_Wide_Portrait%29.png',
         dob: '1986-12-01',
         country: 'United Kingdom',
@@ -138,7 +139,7 @@ const vipData: Vip[] = [
     {
         name: 'Charlie Kirk',
         source: 'Dead far right influencer',
-        squareImage: 'https://upload.wikimedia.org/wikipedia/commons/2/25/Charlie_Kirk_shooting_scene_close_up.png',
+        squareImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8k7XzV5WAWC2G0QhkHk-wHGlktYUFDBNIIrXXZsUhFBbiTcOgEgmmSmU&s=10',
         dob: '1993-10-14',
         dod: '2025-09-10',
         country: 'USA',
@@ -157,7 +158,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Larry Ellison',
-        source: 'Billionaire, AI jerk',
+        source: 'Billionaire, OG AI bro, mass surveillance advocate',
         squareImage: 'https://imageio.forbes.com/specials-images/imageserve/5e8b62cfc095010007bffea0/0x0.jpg?format=jpg&crop=4529,4532,x0,y652,safe&height=288&width=288&fit=bounds',
         dob: '1944-08-17',
         country: 'USA',
@@ -166,7 +167,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Jeffrey Epstein',
-        source: 'Pedophile, human trafficker, murderer, friends to D. Trump',
+        source: 'Pedophile, child trafficker, murderer',
         squareImage: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Jeffrey_Epstein_mug_shot_%28cropped%29.jpg',
         dob: '1953-01-20',
         dod: '2019-08-10',
@@ -190,8 +191,35 @@ const vipData: Vip[] = [
         dob: '1949-03-05',
         country: 'FR',
         countryCode: 'fr',
+        isMale: true
+    },
+    {
+        name: 'Vincent Bolloré',
+        source: 'Billionaire, media mogul',
+        squareImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Festival_automobile_international_2014_-_Photocall_-_103.jpg/500px-Festival_automobile_international_2014_-_Photocall_-_103.jpg',
+        dob: '1952-04-01',
+        country: 'FR',
+        countryCode: 'fr',
+        isMale: true
+    },
+    {
+        name: 'Laura Loomer',
+        source: 'Neonazi, MAGA grifter',
+        squareImage: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fplasticsurgerydiary.com%2Fwp-content%2Fuploads%2F2025%2F04%2Flaura-loomer-plastic-surgery4.png',
+        dob: '1993-05-21',
+        country: 'USA',
+        countryCode: 'us',
         isMale: false
     },
+    {
+        name: 'Robert Kraft',
+        source: 'Billionaire, zionist, genocide enthusiast',
+        squareImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/RobertKraftPatriots_%28cropped%29.jpg/500px-RobertKraftPatriots_%28cropped%29.jpg',
+        dob: '1941-06-05',
+        country: 'USA',
+        countryCode: 'us',
+        isMale: true
+    }
 ];
 
 export default vipData;
