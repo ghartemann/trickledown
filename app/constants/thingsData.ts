@@ -8,7 +8,7 @@ const thingsData: Thing[] = [
         slug: 'coffee',
         icon: 'coffee',
         price: {
-            value: 0.4,
+            value: 0.6,
             currency: 'EUR'
         },
         sources: []
@@ -74,6 +74,16 @@ const thingsData: Thing[] = [
         sources: []
     },
     {
+        name: 'Lyon transit monthly pass',
+        slug: 'metro',
+        icon: 'credit-card',
+        price: {
+            value: 75.9,
+            currency: 'EUR'
+        },
+        sources: []
+    },
+    {
         name: 'Montreal transit monthly pass',
         slug: 'metro',
         icon: 'credit-card',
@@ -120,7 +130,7 @@ const thingsData: Thing[] = [
         slug: 'switch-2',
         icon: 'gamepad',
         price: {
-            value: 469.99,
+            value: 429.99,
             currency: 'EUR'
         },
         sources: []
@@ -136,11 +146,21 @@ const thingsData: Thing[] = [
         sources: []
     },
     {
-        name: 'An iPhone 17 PRO',
+        name: 'An iPhone 18 PRO',
         slug: 'iphone',
         icon: 'smartphone',
         price: {
-            value: 1329,
+            value: 1479,
+            currency: 'EUR'
+        },
+        sources: []
+    },
+    {
+        name: 'An iPhone Duo',
+        slug: 'iphone',
+        icon: 'smartphone',
+        price: {
+            value: 2339,
             currency: 'EUR'
         },
         sources: []
@@ -150,7 +170,7 @@ const thingsData: Thing[] = [
         slug: 'ram',
         icon: 'memory-stick',
         price: {
-            value: 1511.99,
+            value: 1599.99,
             currency: 'CAD'
         },
         sources: [
@@ -198,7 +218,7 @@ const thingsData: Thing[] = [
         slug: 'gaming-pc',
         icon: 'pc-case',
         price: {
-            value: 14679.99,
+            value: 14899.99,
             currency: 'CAD'
         },
         sources: [
@@ -231,18 +251,22 @@ const thingsData: Thing[] = [
         slug: 'macbook',
         icon: 'laptop',
         price: {
-            value: 8989,
+            value: 11483,
             currency: 'EUR'
         },
         sources: [
             {
                 name: 'Apple',
-                text: 'MacBook Pro 16-inch – Space Black<br>' +
-                    '- 16-inch Liquid Retina XDR display<br>' +
-                    '- Nano-texture glass<br>' +
-                    '- Apple M4 Max chip with 16-core CPU, 40-core GPU, and 16-core Neural Engine<br>' +
-                    '- 128GB unified memory<br>' +
-                    '- 8TB SSD storage',
+                text: '16-inch MacBook Pro, Space Black, with M5 Max chip<br>' +
+                    '- 18-core CPU, 40-core GPU, 16-core Neural Engine' +
+                    '- 128GB unified memory' +
+                    '- 8TB SSD storage' +
+                    '- Nano-texture display glass' +
+                    '- 140W USB-C power adapter' +
+                    '- French backlit Magic Keyboard with Touch ID' +
+                    '- Three Thunderbolt 5 ports, one MagSafe 3 port, 3.5mm headphone jack, HDMI port, and SDXC card reader' +
+                    '- Support for up to four external displays' +
+                    '- Accessory kit',
                 link: 'https://www.apple.com/fr/shop/buy-mac/macbook-pro/16-pouces-noir-sid%C3%A9ral-verre-d%E2%80%99%C3%A9cran-standard-puce-apple-m4-max-avec-cpu-16-c%C5%93urs-et-gpu-40-c%C5%93urs-48-go-de-m%C3%A9moire-1to'
             }
         ]
@@ -278,11 +302,11 @@ const thingsData: Thing[] = [
         ]
     },
     {
-        name: 'A 2026 Ford F-150',
+        name: 'A 2026 Ford F-150 Raptor',
         slug: 'car',
         icon: 'car',
         price: {
-            value: 60000, // 60k
+            value: 113520, // 113k
             currency: 'CAD'
         },
         sources: [
@@ -302,7 +326,7 @@ const thingsData: Thing[] = [
         sources: []
     },
     {
-        name: 'A Tesla Cybertruck',
+        name: 'A Tesla Cybertruck "Cyberbeast"',
         slug: 'tesla',
         icon: 'truck-electric',
         price: {
@@ -324,7 +348,7 @@ const thingsData: Thing[] = [
         slug: 'piano',
         icon: 'piano',
         price: {
-            value: 230700, // 230k
+            value: 146900, // 246k
             currency: 'USD',
         },
         sources: [
@@ -471,7 +495,7 @@ const thingsData: Thing[] = [
         },
         sources: [
             {
-                text: 'Fun fact: Trump doesn\'t need this toilet anymore; he just shits himself publicly instead.',
+                text: 'Fun fact: Trump doesn\'t need this toilet anymore, he just shits himself publicly instead.',
             },
             {
                 name: 'CNN Style',
@@ -635,7 +659,7 @@ const thingsData: Thing[] = [
                 link: 'https://en.wikipedia.org/wiki/Development_of_Grand_Theft_Auto_V'
             },
             {
-                text: 'The game was released in 2013; adjusting for inflation, that would be about $US352 million in 2025.'
+                text: 'The game was released in 2013; adjusting for inflation, that would be about ~$US 352M in 2025.'
             }
         ]
     },
@@ -696,7 +720,7 @@ const thingsData: Thing[] = [
                     'state we know today. It spanned over 2,140,000 km², covering parts of 15 present-day ' +
                     'U.S. states and 2 Canadian provinces: Arkansas, Iowa, Missouri, Kansas, Oklahoma, Nebraska, ' +
                     'Minnesota, Louisiana, New Mexico, Texas, North Dakota, South Dakota, Wyoming, Montana, and ' +
-                    'Colorado — plus Alberta and Saskatchewan in Canada.' +
+                    'Colorado — plus Canada\'s Alberta and Saskatchewan.' +
                     '<img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Louisiana_Purchase.png" />',
                 link: 'https://en.wikipedia.org/wiki/Louisiana_Purchase#/media/File:Louisiana_Purchase.png'
             }
@@ -916,16 +940,16 @@ const thingsData: Thing[] = [
         slug: 'gaza',
         icon: 'hospital',
         price: {
-            value: 70000000000, // 70 billion
+            value: 71400000000, // 71 billion
             currency: 'USD'
         },
         sources: [
             {
-                name: 'The Guardian',
-                text: '<i>Israel’s war in Gaza has created a “human-made abyss”, and reconstruction is likely to cost more than $70bn (£53bn) over several decades, the United ' +
-                    'Nations has said.</i>',
-                date: '2025-11-25',
-                link: 'https://www.theguardian.com/world/2025/nov/25/rebuilding-human-made-abyss-gaza-un'
+                name: 'Al Jazeera',
+                text: '<i>The devastation from more than two years of war has killed at least 73,000 Palestinians, injured 173,000 and displaced 1.9 million. It has left the Gaza ' +
+                    'Strip needing an estimated $71.4bn to recover, according to the UN-EU-World Bank Rapid Damage and Needs Assessment (RDNA) released in April.</i>',
+                date: '2026-07-23',
+                link: 'https://www.aljazeera.com/news/2026/7/23/rebuilding-gaza-to-cost-71bn-must-include-palestinians-report-finds'
             }
         ]
     },
@@ -948,23 +972,6 @@ const thingsData: Thing[] = [
             },
             {
                 text: 'Aiming for the middle of that range, we get 75 billion CAD, which is about 50 billion EUR.'
-            }
-        ]
-    },
-    {
-        name: 'Israel\'s war on Gaza',
-        slug: 'israel',
-        icon: 'bomb',
-        price: {
-            value: 55600000000, // 55.6 billion
-            currency: 'USD'
-        },
-        sources: [
-            {
-                name: 'Wikipedia',
-                text: '<i>According to the Bank of Israel, Israel’s war-related costs from 2023 to 2025 could end up ' +
-                    'amounting to $55.6 billion, thereby costing Israel 10% of its economy.</i>',
-                link: 'https://en.wikipedia.org/wiki/Economic_impact_of_the_Gaza_war'
             }
         ]
     },
@@ -1058,7 +1065,7 @@ const thingsData: Thing[] = [
                 link: 'https://www.oxfamamerica.org/explore/stories/how-much-money-would-it-take-to-end-world-hunger/'
             },
             {
-                text: '2030 - 2022 = 8 years, so 37 billion * 8 = 333 billion $US'
+                text: '37 billion per year * 8 years (from 2022 to 2030) = 333 billion $US'
             }
         ]
     },
@@ -1067,14 +1074,14 @@ const thingsData: Thing[] = [
         slug: 'muskrat',
         icon: 'trash-2',
         price: {
-            value: 852400000000, // 852.4 billion
+            value: 943300000000, // 943 billion
             currency: 'USD'
         },
         sources: [
             {
                 name: 'Forbes',
                 link: 'https://www.forbes.com/real-time-billionaires/',
-                date: '2026-02-03',
+                date: '2026-09-17',
             }
         ]
     },
@@ -1197,7 +1204,7 @@ const thingsData: Thing[] = [
         slug: 'us-gdp',
         icon: 'chart-no-axes-combined',
         price: {
-            value: 31821000000000, // 31.821 trillion
+            value: 32380000000000, // 32.38 trillion
             currency: 'USD'
         },
         sources: [

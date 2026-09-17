@@ -20,12 +20,12 @@ const wagesData: Wage[] = [
     },
     {
         name: 'French RSA',
-        hourlyWage: 647.79 / 35 / 4,
+        hourlyWage: 651.69 / 35 / 4,
         displayed: false,
         sources: [
             {
                 text: 'To properly compare the RSA with the minimum wage, we emulate a 35-hour work week.<br>' +
-                    '647.79 / 35 / 4 = ' + useFormat().currency(647.79 / 35 / 4) + ' per hour',
+                    '651.69 / 35 / 4 = ' + useFormat().currency(651.69 / 35 / 4) + ' per hour',
             },
             {
                 name: 'Service-Public.fr',
@@ -46,20 +46,23 @@ const wagesData: Wage[] = [
         sources: [
             {
                 name: 'Wikipedia',
-                text: '<i>In 2009, Congress increased it to $7.25 per hour with the Fair Minimum Wage Act of 2007.</i>',
+                text: '<i>In 2009, Congress increased it to $7.25 per hour with the Fair Minimum Wage Act of 2007. It has not been increased since.</i>',
                 link: 'https://en.wikipedia.org/wiki/Minimum_wage_in_the_United_States'
+            },
+            {
+                text: '<strong>It has not been increased since.</strong>'
             }
         ]
     },
     {
         name: 'French minimum wage',
-        hourlyWage: 9.4,
+        hourlyWage: 9.74,
         displayed: true,
         sources: [
             {
                 name: 'Service-Public.fr',
                 link: 'https://www.service-public.fr/particuliers/vosdroits/F2300',
-                date: '2024-11-01'
+                date: '2026-09-17'
             }
         ]
     },

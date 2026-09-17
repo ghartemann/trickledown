@@ -1,7 +1,7 @@
 export default {
-    usdToEur: 0.86180341,
-    gbpToEur: 1.15803635,
-    cadToEur: 0.62374786,
+    usdToEur: 0.86995666,
+    gbpToEur: 1.16370411,
+    cadToEur: 0.62227968,
 };
 
-//2026-02-03
+//2026-09-17
