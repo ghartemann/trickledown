@@ -1,4 +1,4 @@
-import type {Vip} from "~/interfaces/Wage.ts";
+import type {Vip} from "~/interfaces/Vip.ts";
 
 const vipData: Vip[] = [
     {
@@ -57,7 +57,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'J. K. Rowling',
-        source: 'Billionaire, gigantic transphobic & racist old hag',
+        source: 'Billionaire, unrelenting transphobic old hag',
         squareImage: 'https://specials-images.forbesimg.com/imageserve/5ed56d114231c70006c8f37b/416x416.jpg?background=000000&cropX1=0&cropX2=654&cropY1=96&cropY2=750',
         dob: '1965-07-31',
         country: 'United Kingdom',

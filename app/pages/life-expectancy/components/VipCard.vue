@@ -75,12 +75,12 @@
                     :color="vip.dod && lifePercentage < 100 ? 'success' : lifePercentage === 100 ? 'error' : lifePercentage >= 70 ? 'success' : 'warning'"
                 ></UProgress>
 
-                <div class="mt-1 text-center text-sm italic text-gray-500">
+                <div class="mt-1 text-center text-xs italic text-gray-500">
                     <template v-if="vip.dod">
                         <span>
                             {{ lifePercentage < 100
                             ? 'they still had '
-                            : 'exceeded life exp. by ' }}
+                            : `exceeded ${vip.isMale ? 'his' : 'her'} life expectancy by ` }}
                         </span>
 
                         <span class="font-semibold">
@@ -94,7 +94,7 @@
 
                     <template v-else>
                         <span v-if="lifePercentage === 100">
-                            exceeded life exp. by
+                            exceeded {{ vip.isMale ? 'his' : 'her' }} life expectancy by
                         </span>
 
                         <span class="font-semibold">
@@ -176,7 +176,7 @@ const data = computed(() => {
     d.push(
         {
             name: 'Life expectancy',
-            value: props.generalLifeExpectancy + ` years (${props.vip.countryCode.toUpperCase()}, ${props.vip.isMale ? 'M' : 'F'})`,
+            value: props.generalLifeExpectancy + ` years`,
             icon: 'i-lucide-heart-pulse'
         },
         {

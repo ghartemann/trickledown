@@ -1,6 +1,6 @@
 import useFormat from "~/composables/format.js";
 import currencies from "~/constants/currencies.js";
-import type { Wage } from "~/interfaces/Wage";
+import type { Wage } from "~/interfaces/Wage.ts";
 
 const wagesData: Wage[] = [
     {

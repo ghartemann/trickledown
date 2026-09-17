@@ -1,9 +1,10 @@
-import type {Source} from "~/interfaces/Source";
-
-export interface Wage {
+export interface Vip {
     name: string;
-    subName?: string;
-    hourlyWage: number;
-    displayed: boolean;
-    sources: Source[];
+    source: string;
+    squareImage?: string;
+    dob: string;
+    dod?: string;
+    country: string;
+    countryCode: string;
+    isMale: boolean;
 }

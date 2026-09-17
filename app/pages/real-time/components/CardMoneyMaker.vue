@@ -117,16 +117,17 @@ const tabs = [
 const explanation = [
     {
         title: '24/7 (all the time)',
-        text: 'Assuming you work 24/7, all year round, without any breaks or holidays, at a specific hourly wage.'
+        text: 'Assuming you work 24/7, all year round, without any breaks or holidays, at a specific hourly wage. ' +
+            'The scenario where you are chained to your workstation and aren\'t allowed to stop working.'
     },
     {
         title: '9-5, Monday-Friday',
         text: 'Assuming you work 9-5, Monday to Friday, with weekends off. Days are 8 hours long, weeks are 5 days ' +
-            'long. This is a more realistic scenario.'
+            'long. If something needs 10 hours, it will then take 1 day (8h) and 2 hours. This is a more realistic scenario.'
     },
     {
         text: 'In both cases, it does not take into account any taxes or other deductions that may apply to your ' +
-            'income, or any other expenses you may have. This is a gamified simulation.'
+            'income, or any other expenses you may have. <strong>Keep in mind this is a gamified simulation.</strong>'
     }
 ];
 </script>
