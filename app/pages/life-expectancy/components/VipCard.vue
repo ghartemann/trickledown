@@ -197,7 +197,7 @@ const lifeBadge = computed(() => {
             color: 'success',
             icon: 'i-lucide-check-circle',
             label: percentage >= 100
-                ? 'winner winner chicken dinner'
+                ? 'winner'
                 : 'busted'
         };
     }
