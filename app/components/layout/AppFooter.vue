@@ -1,5 +1,5 @@
 <template>
-    <UFooter>
+    <UFooter class="pb-16 md:pb-0">
         <div class="text-center text-xs">
             <UBadge
                 size="sm"

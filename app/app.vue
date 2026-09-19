@@ -1,16 +1,19 @@
 <template>
     <UApp>
-        <AppHeader></AppHeader>
+        <AppHeader :routes="routes"></AppHeader>
 
         <NuxtPage></NuxtPage>
 
         <USeparator></USeparator>
 
         <AppFooter></AppFooter>
+
+        <AppFloatingMenu :routes="routes" class="md:hidden"></AppFloatingMenu>
     </UApp>
 </template>
 
 <script setup>
+import AppFloatingMenu from '~/components/AppFloatingMenu.vue';
 import AppFooter from '~/components/layout/AppFooter.vue';
 import AppHeader from '~/components/layout/AppHeader.vue';
 
@@ -38,4 +41,27 @@ useHead({
         { rel: 'canonical', href: meta.url }
     ]
 });
+
+const route = useRoute();
+
+const routes = computed(() => [
+    {
+        label: 'Real time trickledown',
+        icon: 'i-lucide-timer',
+        to: '/real-time',
+        active: route.path.startsWith('/real-time')
+    },
+    {
+        label: 'Tax Simulator 2027',
+        icon: 'i-lucide-hand-coins',
+        to: '/tax',
+        active: route.path.startsWith('/tax')
+    },
+    {
+        label: 'Life expectancy',
+        icon: 'i-lucide-heart-pulse',
+        to: '/life-expectancy',
+        active: route.path.startsWith('/life-expectancy')
+    }
+]);
 </script>
