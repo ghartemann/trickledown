@@ -111,7 +111,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Marine Le Pen',
-        source: 'Convicted politician, racist and daughter of a Nazi',
+        source: 'Convicted politician, racist and daughter of a fascist',
         squareImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Marine_Le_Pen_2025_%28cropped%29.jpg/500px-Marine_Le_Pen_2025_%28cropped%29.jpg',
         dob: '1968-08-05',
         country: 'France',
