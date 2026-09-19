@@ -3,7 +3,7 @@ import type {Vip} from "~/interfaces/Vip.ts";
 const vipData: Vip[] = [
     {
         name: 'Donald Trump',
-        source: 'President, dictator, pedophile, colossal piece of shit',
+        source: 'President, dictator, pedophile, piece of shit',
         squareImage: 'https://imageio.forbes.com/specials-images/imageserve/5638e53de4b0ffa7afe6a26a/0x0.jpg?format=jpg&crop=704,704,x27,y32,safe&fit=bounds',
         dob: '1946-06-14',
         country: 'USA',
@@ -158,7 +158,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Larry Ellison',
-        source: 'Billionaire, OG AI bro, mass surveillance advocate',
+        source: 'Billionaire, OG AI bro, mass surveillance fan',
         squareImage: 'https://imageio.forbes.com/specials-images/imageserve/5e8b62cfc095010007bffea0/0x0.jpg?format=jpg&crop=4529,4532,x0,y652,safe&height=288&width=288&fit=bounds',
         dob: '1944-08-17',
         country: 'USA',
@@ -186,7 +186,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Bernard Arnault',
-        source: 'Billionaire, pretentious asshat',
+        source: 'Billionaire, heir, connard',
         squareImage: 'https://imageio.forbes.com/specials-images/imageserve/5dc05518ca425400079c659f/0x0.jpg?format=jpg&crop=4000,4003,x0,y1209,safe&height=288&width=288&fit=bounds',
         dob: '1949-03-05',
         country: 'FR',
@@ -195,7 +195,7 @@ const vipData: Vip[] = [
     },
     {
         name: 'Vincent Bolloré',
-        source: 'Billionaire, media mogul',
+        source: 'Billionaire, media mogul, fascist',
         squareImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Festival_automobile_international_2014_-_Photocall_-_103.jpg/500px-Festival_automobile_international_2014_-_Photocall_-_103.jpg',
         dob: '1952-04-01',
         country: 'FR',
