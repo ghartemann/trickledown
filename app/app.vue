@@ -57,11 +57,11 @@ const routes = computed(() => [
         to: '/tax',
         active: route.path.startsWith('/tax')
     },
-    {
-        label: 'Life expectancy',
-        icon: 'i-lucide-heart-pulse',
-        to: '/life-expectancy',
-        active: route.path.startsWith('/life-expectancy')
-    }
+    // {
+    //     label: 'Life expectancy',
+    //     icon: 'i-lucide-heart-pulse',
+    //     to: '/life-expectancy',
+    //     active: route.path.startsWith('/life-expectancy')
+    // }
 ]);
 </script>
