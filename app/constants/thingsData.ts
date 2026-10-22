@@ -74,7 +74,7 @@ const thingsData: Thing[] = [
         sources: []
     },
     {
-        name: 'Lyon transit monthly pass',
+        name: 'Lyon\'s TCL transit pass',
         slug: 'metro',
         icon: 'credit-card',
         price: {
@@ -84,7 +84,7 @@ const thingsData: Thing[] = [
         sources: []
     },
     {
-        name: 'Montreal transit monthly pass',
+        name: 'Montréal\'s STM transit pass',
         slug: 'metro',
         icon: 'credit-card',
         price: {
@@ -181,7 +181,7 @@ const thingsData: Thing[] = [
         ]
     },
     {
-        name: 'French driver license',
+        name: 'French driver\'s license',
         slug: 'driving-license',
         icon: 'car-front',
         price: {
@@ -199,7 +199,7 @@ const thingsData: Thing[] = [
         ]
     },
     {
-        name: 'Montreal Plateau 2B rent',
+        name: 'Montréal Plateau 2B rent',
         slug: 'rent',
         icon: 'squirrel',
         price: {

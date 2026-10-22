@@ -1,3 +1,3 @@
 export default {
-    worldPopulation: 8317080250 // 2026-09-17
+    worldPopulation: 8323805989 // 2026-10-22
 };
